@@ -1,0 +1,28 @@
+service_id,date,holiday_name,exception_type
+c_71859_b_86691_d_64,20260907,Labor Day,1
+c_71859_b_86691_d_31,20270118,Martin Luther King Day,2
+c_71859_b_86691_d_31,20261127,Day after Thanksgiving - No Express,2
+c_71859_b_86691_d_31,20261126,"Thanksgiving Day - Sunday, No DASH",2
+c_71859_b_86691_d_31,20260907,Labor Day,2
+c_71608_b_none_d_64,20270101,New Years Day,1
+c_71608_b_none_d_64,20261225,"Christmas Day- Sunday, No DASH",1
+c_71608_b_none_d_64,20261126,"Thanksgiving Day - Sunday, No DASH",1
+c_71481_b_86169_d_64,20270118,Martin Luther King Day,1
+c_71481_b_86169_d_64,20261224,Christmas Eve,1
+c_71481_b_86169_d_32,20261226,Day after Christmas,2
+c_71481_b_86169_d_31,20270118,Martin Luther King Day,2
+c_71481_b_86169_d_31,20270101,New Years Day,2
+c_71481_b_86169_d_31,20261225,"Christmas Day- Sunday, No DASH",2
+c_71481_b_86169_d_31,20261224,Christmas Eve,2
+c_71481_b_86169_d_31,20261127,Day after Thanksgiving - No Express,2
+c_71481_b_86169_d_31,20261126,"Thanksgiving Day - Sunday, No DASH",2
+c_70976_b_84051_d_32,20261226,Day after Christmas,2
+c_70976_b_84051_d_31,20270118,Martin Luther King Day,2
+c_70976_b_84051_d_31,20270101,New Years Day,2
+c_70976_b_84051_d_31,20261225,"Christmas Day- Sunday, No DASH",2
+c_70976_b_84051_d_31,20261224,Christmas Eve,2
+c_70976_b_84051_d_31,20261127,Day after Thanksgiving - No Express,2
+c_70976_b_84051_d_31,20261126,"Thanksgiving Day - Sunday, No DASH",2
+c_70976_b_84051_d_31,20260907,Labor Day,2
+c_70780_b_none_d_64,20261226,Day after Christmas,1
+c_70780_b_none_d_31,20261127,Day after Thanksgiving - No Express,1

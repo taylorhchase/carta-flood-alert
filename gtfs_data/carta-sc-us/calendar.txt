@@ -1,0 +1,8 @@
+service_id,service_name,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+c_71859_b_86691_d_64,CARTA Yr Round_8.16.26-9.7.26-add210w-Beach (Sunday only),0,0,0,0,0,0,1,20260816,20260907
+c_71859_b_86691_d_48,CARTA Yr Round_8.16.26-9.7.26-add210w-Beach (FSa),0,0,0,0,1,1,0,20260816,20260907
+c_71859_b_86691_d_32,CARTA Yr Round_8.16.26-9.7.26-add210w-Beach (Saturday only),0,0,0,0,0,1,0,20260816,20260907
+c_71859_b_86691_d_31,CARTA Yr Round_8.16.26-9.7.26-add210w-Beach (Weekday),1,1,1,1,1,0,0,20260816,20260907
+c_71481_b_86169_d_64,CARTA Yr Round_1.5.26-5.3.26; 9.8.26-5.27.27 (Sunday only),0,0,0,0,0,0,1,20260908,20270527
+c_71481_b_86169_d_32,CARTA Yr Round_1.5.26-5.3.26; 9.8.26-5.27.27 (Saturday only),0,0,0,0,0,1,0,20260908,20270527
+c_71481_b_86169_d_31,CARTA Yr Round_1.5.26-5.3.26; 9.8.26-5.27.27 (Weekday),1,1,1,1,1,0,0,20260908,20270527

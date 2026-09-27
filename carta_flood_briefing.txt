@@ -1,0 +1,53 @@
+CARTA FLOOD ALERT SYSTEM -- ROUTE FLOOD RISK BRIEFING
+=======================================================
+
+OVERVIEW
+========
+This briefing covers 155 unique CARTA stops across seven routes: DASH 213, DASH 211, DASH 210, Route 20, Route 203, Route 30, and XP1. Some stops are shared by more than one route, so the counts below are given per route -- a shared stop is counted once for each route it serves, since it is a real risk to riders on all of them.
+
+Of 181 route-stop combinations across the seven routes, 43 sit at an elevation low enough to flood under at least one of NOAA's three coastal flood stages for Charleston Harbor (Station 8665530). Exposure varies significantly by route:
+
+  - Routes with flood-exposed stops: Route 213, Route 210, Route 30, Route 203, Route XP1, Route 211, Route 20
+
+Routes are detailed below, ordered from most to least frequently affected.
+
+METHODOLOGY & DATA SOURCES
+===========================
+- Stop locations and route assignments: CARTA's public GTFS feed (data.trilliumtransit.com/gtfs/carta-sc-us/carta-sc-us.zip).
+- Ground elevation at each stop: USGS 3DEP Elevation Point Query Service (epqs.nationalmap.gov).
+- Flood thresholds: a stop is classified as flooding once ground elevation drops below 5.5 ft (minor, 7.0 ft harbor level), 6.5 ft (moderate, 7.5 ft harbor level), or 7.5 ft (major, 8.0 ft harbor level).
+- Annual event frequency: NOAA's historical average number of times per year Charleston Harbor Station 8665530 reaches each tide stage (minor: 25/yr, moderate: 8/yr, major: 3/yr).
+
+IMPORTANT CAVEAT: the elevation-to-flood mapping above is a simplifying screening assumption, not a validated hydrological model. It does not account for storm drainage capacity, distance from the harbor, or storm surge behavior. This analysis should be used to prioritize which stops warrant a closer engineering look, not as a precise prediction of which stops will flood on a given day.
+
+ROUTE-BY-ROUTE SUMMARY
+=======================
+
+Route 213 (Lockwood/Calhoun - DASH)
+-----------------------------------
+14 of 24 stops on this route (58%) sit low enough to flood during elevated tides (9 at minor stage, 4 at moderate stage, 1 at major stage). Its lowest point, Bee St / VA Hospital, sits at only 3.2 ft of elevation. The first stops go under at the MINOR coastal flood stage (7.0 ft harbor level), which NOAA's historical data shows Charleston Harbor reaches about 25 times per year. In practical terms, riders on this route should expect tide-related disruptions on the order of 25 days a year, concentrated around its lowest-lying stops.
+
+Route 210 (CofC / Aquarium - DASH Shuttle)
+------------------------------------------
+8 of 16 stops on this route (50%) sit low enough to flood during elevated tides (6 at minor stage, 2 at major stage). Its lowest point, Concord St / Inspection St, sits at only 3.4 ft of elevation. The first stops go under at the MINOR coastal flood stage (7.0 ft harbor level), which NOAA's historical data shows Charleston Harbor reaches about 25 times per year. In practical terms, riders on this route should expect tide-related disruptions on the order of 25 days a year, concentrated around its lowest-lying stops.
+
+Route 30 (Savannah Highway)
+---------------------------
+7 of 51 stops on this route (14%) sit low enough to flood during elevated tides (2 at minor stage, 2 at moderate stage, 3 at major stage). Its lowest point, Spring St / Hagood Ave, sits at only 4.3 ft of elevation. The first stops go under at the MINOR coastal flood stage (7.0 ft harbor level), which NOAA's historical data shows Charleston Harbor reaches about 25 times per year. In practical terms, riders on this route should expect tide-related disruptions on the order of 25 days a year, concentrated around its lowest-lying stops.
+
+Route 203 (Medical Shuttle)
+---------------------------
+5 of 7 stops on this route (71%) sit low enough to flood during elevated tides (3 at minor stage, 2 at moderate stage). Its lowest point, Courtenay Dr / Charleston Center Dr, sits at only 2.6 ft of elevation. The first stops go under at the MINOR coastal flood stage (7.0 ft harbor level), which NOAA's historical data shows Charleston Harbor reaches about 25 times per year. In practical terms, riders on this route should expect tide-related disruptions on the order of 25 days a year, concentrated around its lowest-lying stops.
+
+Route XP1 (James Island - North Charleston)
+-------------------------------------------
+4 of 12 stops on this route (33%) sit low enough to flood during elevated tides (3 at minor stage, 1 at moderate stage). Its lowest point, Calhoun St / Ashley Ave, sits at only 4.0 ft of elevation. The first stops go under at the MINOR coastal flood stage (7.0 ft harbor level), which NOAA's historical data shows Charleston Harbor reaches about 25 times per year. In practical terms, riders on this route should expect tide-related disruptions on the order of 25 days a year, concentrated around its lowest-lying stops.
+
+Route 211 (Meeting/King - DASH)
+-------------------------------
+3 of 25 stops on this route (12%) sit low enough to flood during elevated tides (2 at minor stage, 1 at moderate stage). Its lowest point, Market St / East Bay St, sits at only 4.0 ft of elevation. The first stops go under at the MINOR coastal flood stage (7.0 ft harbor level), which NOAA's historical data shows Charleston Harbor reaches about 25 times per year. In practical terms, riders on this route should expect tide-related disruptions on the order of 25 days a year, concentrated around its lowest-lying stops.
+
+Route 20 (King Street / Meeting)
+--------------------------------
+2 of 46 stops on this route (4%) sit low enough to flood during elevated tides (2 at major stage). Its lowest point, King St / Huger St, sits at only 6.6 ft of elevation. The first stops go under at the MAJOR coastal flood stage (8.0 ft harbor level), which NOAA's historical data shows Charleston Harbor reaches about 3 times per year. In practical terms, riders on this route should expect tide-related disruptions on the order of 3 days a year, concentrated around its lowest-lying stops.
+

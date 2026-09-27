@@ -1,0 +1,159 @@
+==========================================================================
+CARTA FLOOD ALERT SYSTEM -- HISTORICAL VALIDATION: AUGUST 2025
+==========================================================================
+
+THE EVENT
+---------
+On August 22, 2025, CARTA posted a generic Instagram alert reading
+"service interruptions due to flooding" -- no advance warning, no
+route names, no stop names, posted reactively rather than the night
+before. This report reruns our actual model against NOAA's historical
+records to show what it would have displayed on 2025-08-20, 48
+hours before 2025-08-22.
+
+STEP 1: NOAA OBSERVED WATER LEVELS -- AUG 20-22, 2025 (GROUND TRUTH)
+--------------------------------------------------------------------
+  2025-08-20: peak observed = 7.61 ft at 2025-08-20 19:06
+  2025-08-21: peak observed = 7.72 ft at 2025-08-21 19:54
+  2025-08-22: peak observed = 7.93 ft at 2025-08-22 20:30 <- CARTA's Instagram alert
+
+This was not a single-day surprise -- it was a 3-day escalation, with
+every one of these three days already at or above our MODERATE
+threshold (7.5 ft) before CARTA said anything publicly.
+
+STEP 2: WHAT OUR SYSTEM WOULD HAVE SEEN ON AUG 20 (48 HOURS OUT)
+------------------------------------------------------------------
+Astronomical predicted peak vs. actual observed peak, each day:
+  Date        Predicted (astro)   Observed (actual)   Implied surge
+  2025-08-20  6.25                7.61                1.37 ft
+  2025-08-21  6.28                7.72                1.44 ft
+  2025-08-22  6.23                7.93                1.70 ft
+
+The astronomical tide barely moved day to day (~6.2-6.3 ft, unremarkable
+for Charleston Harbor) while the surge component climbed steadily --
+this was a growing storm surge event layered on a routine tide, exactly
+the failure mode the project brief describes: tide predictions alone
+would not have caught it.
+
+Predicted PEAK for 2025-08-22, as knowable on 2025-08-20: 6.23 ft
+
+STEP 3: NWS COASTAL FLOOD ADVISORY -- HISTORICAL AVAILABILITY CHECK
+--------------------------------------------------------------------
+Control query (area=SC, last 7 days): 134 alerts returned
+  -> confirms the historical alerts endpoint is reachable and working.
+Test query (zone=SCZ047, Aug 19-23, 2025): 0 alerts returned
+
+HONEST LIMITATION: the same query pattern returns real alerts for the
+past week but zero for a 13-month-old date -- that's a retention
+cutoff in NWS's public archive, not proof that no advisory was issued.
+Given three straight days of 7.5+ ft observed flooding, an active
+Coastal Flood Advisory or Warning during this window is likely, but
+this API cannot confirm it retroactively. The LIVE dashboard is not
+affected by this gap -- it reads ACTIVE alerts in real time, which
+only a historical backtest like this one is blind to.
+
+STEP 4: WHAT OUR MODEL WOULD HAVE DECLARED ON AUG 20 (TIDE-ONLY)
+-----------------------------------------------------------------
+Predicted peak 6.23 ft -> classify_severity() = NONE
+
+Because Step 3 could not recover a historical surge figure, and the
+astronomical tide alone falls below our 7.0 ft MINOR threshold, a
+tide-prediction-only run on Aug 20 would NOT have flagged this event.
+This is precisely why carta_alert.py combines tide AND active NWS
+surge data rather than relying on tide predictions alone.
+
+STEP 5: WHAT OUR MODEL SAYS ABOUT THE ACTUAL OBSERVED PEAK
+------------------------------------------------------------
+This is the real test of the route/stop logic: given the water level
+Charleston Harbor actually reached, what does our threshold model --
+the same functions the live dashboard uses -- say should have flooded?
+
+Actual observed peak: 7.93 ft -> classify_severity() = MODERATE
+Implied surge on 2025-08-22: 1.70 ft
+
+ROUTES AND STOPS THAT WOULD HAVE BEEN FLAGGED (MODERATE):
+
+  [MODERATE] Route 213 (Lockwood/Calhoun - DASH) -- 13 stop(s) at risk
+      - Bee St / VA Hospital (3.2 ft elevation)
+      - Courtenay Dr / Doughty St (3.2 ft elevation)
+      - America St / Reid St (3.5 ft elevation)
+      - Calhoun St / Ashley Ave (4.0 ft elevation)
+      - President St / Line St (4.3 ft elevation)
+      ... and 8 more
+
+  [MODERATE] Route 210 (CofC / Aquarium - DASH Shuttle) -- 6 stop(s) at risk
+      - Concord St / Inspection St (3.4 ft elevation)
+      - Calhoun St / East Bay St (3.4 ft elevation)
+      - Washington St / Laurens St (4.6 ft elevation)
+      - Concord St / Aquarium Wharf (4.6 ft elevation)
+      - Calhoun St / Elizabeth St (4.7 ft elevation)
+      ... and 1 more
+
+  [MODERATE] Route 30 (Savannah Highway) -- 4 stop(s) at risk
+      - Spring St / Hagood Ave (4.3 ft elevation)
+      - Cannon St / President St (5.3 ft elevation)
+      - Cannon St / Wescott St (5.5 ft elevation)
+      - Spring St / President St (5.6 ft elevation)
+
+  [MODERATE] Route 203 (Medical Shuttle) -- 5 stop(s) at risk
+      - Courtenay Dr / Charleston Center Dr (2.6 ft elevation)
+      - Lockwood Dr / Westedge St (5.0 ft elevation)
+      - Jonathan Lucas St / MUSC Quad (5.0 ft elevation)
+      - President St / Bee St (5.5 ft elevation)
+      - Line St / Hagood St (5.6 ft elevation)
+
+  [MODERATE] Route XP1 (James Island - North Charleston) -- 4 stop(s) at risk
+      - Calhoun St / Ashley Ave (4.0 ft elevation)
+      - Calhoun St / Ashley Ave (farside) (4.8 ft elevation)
+      - Calhoun St / Jonathan Lucas St (near side) (5.5 ft elevation)
+      - Calhoun St / Jonathan Lucas St (far side) (5.5 ft elevation)
+
+  [MODERATE] Route 211 (Meeting/King - DASH) -- 3 stop(s) at risk
+      - Market St / East Bay St (4.0 ft elevation)
+      - Vendue Range / Concord St (5.5 ft elevation)
+      - Concord St / Market St (5.6 ft elevation)
+
+SAMPLE RIDER ALERT THAT WOULD HAVE BEEN GENERATED:
+---------------------------------------------------
+CARTA Route 213 (Lockwood/Calhoun - DASH) -- MODERATE FLOOD RISK
+Risk window: Fri Aug 22, 06:30 PM to Fri Aug 22, 11:30 PM
+Projected water level: 7.9 ft (6.2 ft tide + 1.7 ft storm surge)
+Stops likely affected:
+  - Bee St / VA Hospital (3.2 ft elevation)
+  - Courtenay Dr / Doughty St (3.2 ft elevation)
+  - America St / Reid St (3.5 ft elevation)
+  - Calhoun St / Ashley Ave (4.0 ft elevation)
+  - President St / Line St (4.3 ft elevation)
+  - Mary St / America St (4.5 ft elevation)
+  - Fishburne St / President St (5.0 ft elevation)
+  - Lockwood Dr / Westedge St (5.0 ft elevation)
+  - Cannon St / President St (5.3 ft elevation)
+  - Calhoun St / Jonathan Lucas St (far side) (5.5 ft elevation)
+  - Fishburne St / Westedge St (5.6 ft elevation)
+  - Lockwood Dr / Brittlebank Park (5.6 ft elevation)
+  - Calhoun St / Smith St (5.7 ft elevation)
+Riders: allow 15+ extra minutes, or use an alternate stop if yours is listed above.
+Source: NOAA Station 8665530 + NWS Charleston coastal flood alerts
+
+STEP 6: PREDICTED (AUG 20) VS. ACTUAL (AUG 22) -- SUMMARY
+----------------------------------------------------------
+                            Predicted, Aug 20 (tide-only)   Actual, Aug 22 (observed)
+Peak water level                  6.23 ft                            7.93 ft
+Flood severity                       NONE                        MODERATE
+
+WHAT CARTA ACTUALLY COMMUNICATED (Aug 22, 2025):
+  A single reactive Instagram post: "service interruptions due to
+  flooding." No route names, no stop names, no advance timing.
+
+WHAT THIS SYSTEM COULD PROVIDE:
+  - A specific, quantified water-level estimate, 48 hours ahead.
+  - Had a real-time NWS coastal flood advisory been active and ingested
+    the way the live dashboard does (this historical backtest cannot
+    confirm one existed, per Step 3) -- named routes, named stops at
+    specific elevations, and a rider-ready alert, the night before.
+  - Regardless of surge data availability, three straight days of
+    7.5+ ft observed flooding (Step 1) is exactly the kind of pattern
+    a system checking recent observed levels -- not just forward
+    predictions -- could have flagged starting Aug 20 itself; that
+    check is not yet part of carta_alert.py and is a natural next step.
+

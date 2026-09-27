@@ -1,0 +1,10 @@
+service_id,service_description
+c_71859_b_86691_d_64,CARTA Yr Round_8.16.26-9.7.26-add210w-Beach (Sunday only)
+c_71859_b_86691_d_48,CARTA Yr Round_8.16.26-9.7.26-add210w-Beach (FSa)
+c_71859_b_86691_d_32,CARTA Yr Round_8.16.26-9.7.26-add210w-Beach (Saturday only)
+c_71859_b_86691_d_31,CARTA Yr Round_8.16.26-9.7.26-add210w-Beach (Weekday)
+c_71481_b_86169_d_64,CARTA Yr Round_1.5.26-5.3.26; 9.8.26-5.27.27 (Sunday only)
+c_71481_b_86169_d_32,CARTA Yr Round_1.5.26-5.3.26; 9.8.26-5.27.27 (Saturday only)
+c_71481_b_86169_d_31,CARTA Yr Round_1.5.26-5.3.26; 9.8.26-5.27.27 (Weekday)
+c_70976_b_84051_d_32,TriCounty Link 1.3.26-5.29.27 (Saturday only)
+c_70976_b_84051_d_31,TriCounty Link 1.3.26-5.29.27 (Weekday)

@@ -1,0 +1,57 @@
+Subject: A concrete, data-backed look at tidal flooding on CARTA's most vulnerable routes
+
+Hi [CARTA contact name],
+
+I've been working on a prototype tool that gives CARTA riders advance
+warning of tidal flooding disruptions — the night before, not during —
+and I wanted to reach out now that it has real, testable findings
+behind it rather than just a concept.
+
+The core idea: Charleston's tides are predictable 48 hours in advance,
+but the connection between that public NOAA data and CARTA's actual
+route network has never been built. Riders currently find out a route
+is disrupted only after they're already at the stop.
+
+Using CARTA's public GTFS feed and USGS elevation data, I mapped
+ground elevation at all 155 stops across seven of your highest-traffic
+and most flood-exposed routes (DASH 213, DASH 211, DASH 210, Route 20,
+Route 203, Route 30, and XP1), then checked each stop against NOAA's
+published minor/moderate/major coastal flood thresholds for Charleston
+Harbor (Station 8665530). A few findings that I think would be useful
+to your operations team:
+
+  - Route 213 (Lockwood/Calhoun DASH) is the most exposed route
+    reviewed: 58% of its stops sit low enough to flood at minor flood
+    stage — a level Charleston Harbor reaches roughly 25 times a year.
+  - Route 203 (Medical Shuttle) has the highest percentage of any
+    route (71% of its 7 stops), concentrated in the MUSC medical
+    district corridor your own weather policy already flags as a
+    priority to keep serving.
+  - Route 20 (King Street/Meeting) is the least exposed by far — only
+    4% of stops at risk, and only at the rarest (major) flood stage,
+    about 3 times a year.
+
+I want to be upfront about what this is and isn't: it's a screening
+model built from elevation and public tide data, not a validated
+hydrological model — it doesn't yet account for drainage capacity or
+storm surge. But it's a real, reproducible starting point, and I'd
+like to validate it against the City's road closure logs and FEMA's
+flood maps as a next step.
+
+What I'm hoping for is a short conversation — 20-30 minutes — with
+whoever on your team thinks about weather-related service disruptions,
+to hear what would actually be useful to you: which routes to
+prioritize, how far in advance a warning needs to arrive to be
+actionable, and whether a tool like this could plug into anything
+you're already doing.
+
+I can send over the full stop-by-stop and route-by-route data, along
+with a plain-language summary, ahead of any call.
+
+Thank you for your time and for the work you do keeping Charleston
+moving — I'd love the chance to make it a little more predictable for
+your riders on flood days.
+
+Best,
+TC
+[phone / email]

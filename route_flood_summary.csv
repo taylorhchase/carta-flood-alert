@@ -1,0 +1,8 @@
+route,total_stops,stops_at_risk,first_threshold,est_disruptions_per_year
+20,46,2,MAJOR,3
+203,7,5,MINOR,25
+210,16,8,MINOR,25
+211,25,3,MINOR,25
+213,24,14,MINOR,25
+30,51,7,MINOR,25
+XP1,12,4,MINOR,25

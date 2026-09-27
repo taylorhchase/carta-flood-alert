@@ -1,0 +1,1082 @@
+stop_id,stop_city
+819696,Charleston
+2529082,North Charleston
+764497,Charleston
+2332214,Charleston
+798677,North Charleston
+2324961,Moncks Corner
+764582,North Charleston
+2382969,Charleston
+2752244,Charleston
+764733,North Charleston
+764566,North Charleston
+2505987,Hollywood
+764403,Charleston
+764735,North Charleston
+798129,Charleston
+764263,Charleston
+819983,Charleston
+2388499,Prioleau
+764437,Charleston
+764396,Charleston
+819823,Charleston
+764540,North Charleston
+764442,Charleston
+764702,North Charleston
+794834,Charleston
+764558,North Charleston
+2332445,Charleston
+2382267,Jedburg
+764743,North Charleston
+819827,North Charleston
+2483513,Ravenel
+2382768,Sangaree
+764713,North Charleston
+2382415,Huger
+764666,North Charleston
+764439,Charleston
+819982,Charleston
+2382945,Edisto Island
+819943,North Charleston
+764714,North Charleston
+819881,North Charleston
+2483510,Ravenel
+764507,Mount Pleasant
+764239,Charleston
+794848,Mt Pleasant
+2455699,Mount Pleasant
+2536278,Charleston
+819703,Charleston
+764196,Charleston
+764525,North Charleston
+2448617,Mount Pleasant
+2320924,Charleston
+2382824,Summerville
+2388287,St. Stephen
+794785,Charleston
+819856,Charleston
+764843,Charleston
+2335624,Charleston
+2382943,Edisto Island
+764877,Mount Pleasant
+764594,North Charleston
+764476,Charleston
+794869,Mount Pleasant
+819653,Mt. Pleasant
+2505940,Charleston
+2382772,Summerville
+764728,North Charleston
+2335836,Awendaw
+2505227,Willtown Bluff
+764772,North Charleston
+2335837,Mount Pleasant
+2335631,Charleston
+2382427,Old Cordesville
+2387507,St. Stephen
+819924,North Charleston
+2382421,Red Hill
+764469,Mt Pleasant
+764875,North Charleston
+2335838,Mount Pleasant
+2382292,St. George
+794771,Charleston
+819726,Charleston
+764570,North Charleston
+2332453,Huskum Corner Cross Roads
+2559091,North Charleston
+794817,North Charleston
+764419,Mount Pleasant
+789075,North Charleston
+764866,Charleston
+2332457,Legareville
+764305,Charleston
+764278,Charleston
+2382770,Tramway
+764282,Charleston
+764551,North Charleston
+2505951,Charleston
+2455619,Summerville
+2320925,North Charleston
+819869,North Charleston
+2320901,North Charleston
+764237,Charleston
+2388562,Jamestown
+764450,Charleston
+764172,Charleston
+794865,Charleston
+764443,Charleston
+764303,Charleston
+764758,North Charleston
+764800,Charleston
+2335827,Awendaw
+764698,North Charleston
+789102,North Charleston
+2440137,Pineville
+764748,North Charleston
+800539,Charleston
+2320920,Charleston
+819728,Charleston
+819922,North Charleston
+819979,Charleston
+764611,North Charleston
+764904,Charleston
+2320941,North Charleston
+764742,North Charleston
+2382254,St. Stephen
+819825,North Charleston
+2382418,Charity
+794821,North Charleston
+764506,Charleston
+764520,North Charleston
+764415,Mount Pleasant
+764596,North Charleston
+819715,Charleston
+789058,North Charleston
+764368,Mount Pleasant
+794863,Charleston
+819670,Mount Pleasant
+764905,Charleston
+2382955,Osborn
+764473,Mt Pleasant
+764515,Mount Pleasant
+794800,North Charleston
+819874,North Charleston
+798110,North Charleston
+764664,North Charleston
+2332440,Charleston
+764900,Charleston
+3878393,Goose Creek
+764867,Charleston
+800538,Charleston
+2505947,Riverland
+2384109,Goose Creek
+764555,North Charleston
+819880,North Charleston
+800846,North Charleston
+2335623,Charleston
+819895,North Charleston
+2388289,Pineville
+819727,Charleston
+764578,North Charleston
+794775,Charleston
+764306,Charleston
+794766,Charleston
+764829,Mount Pleasant
+800547,Charleston
+764789,Charleston
+802553,North Charleston
+800545,Charleston
+764458,Mount Pleasant
+2320934,North Charleston
+764291,Charleston
+2335813,Moncks Corner
+764304,Charleston
+794764,Charleston
+847937,Charleston
+764327,Charleston
+819923,North Charleston
+819717,Charleston
+794792,North Charleston
+789105,North Charleston
+764457,Charleston
+764496,Charleston
+764252,Charleston
+819721,Charleston
+2382952,Shiloh
+2455618,Charleston
+2320921,Mt Pleasant
+819926,North Charleston
+819689,Charleston
+764774,North Charleston
+764705,North Charleston
+764703,North Charleston
+2332209,Charleston
+2543546,North Charleston
+764583,North Charleston
+764796,North Charleston
+2483547,Ravenel
+764524,North Charleston
+764784,Charleston
+764536,Mount Pleasant
+789109,North Charleston
+819848,North Charleston
+764489,Mount Pleasant
+800541,Charleston
+2501527,North Charleston
+764495,Charleston
+764527,Charleston
+764769,North Charleston
+789121,North Charleston
+764296,Charleston
+2505949,Charleston
+764715,North Charleston
+2332207,Charleston
+2382426,Bethera
+764595,North Charleston
+819875,North Charleston
+2332206,Charleston
+764888,Charleston
+819854,Charleston
+794832,North Charleston
+764279,Charleston
+764452,Charleston
+2332447,Huskum Corner Cross Roads
+2335622,Charleston
+789049,North Charleston
+819986,Charleston
+764846,Charleston
+2320922,Mount Pleasant
+805193,Charleston
+819676,Mount Pleasant
+2320923,Mount Pleasant
+819710,Charleston
+764372,Charleston
+789052,North Charleston
+764574,North Charleston
+2455712,Charleston
+764434,Charleston
+819342,Mount Pleasant
+794808,North Charleston
+764670,North Charleston
+764532,North Charleston
+819669,Mount Pleasant
+2387504,Bonneau
+2382417,Old Joe
+2394658,N
+2388282,Moncks Corner
+794767,Charleston
+764474,Charleston
+764739,North Charleston
+2332212,Mount Pleasant
+794875,Mount Pleasant
+2332435,Johns Island
+2382266,Jedburg
+2382424,Mt Pleasant
+764176,Charleston
+794857,Mount Pleasant
+764731,North Charleston
+2388500,Pineville
+794791,North Charleston
+789073,North Charleston
+2332438,Charleston
+794770,Charleston
+2335619,Charleston
+764677,North Charleston
+819340,Mount Pleasant
+764174,Charleston
+789117,North Charleston
+789123,North Charleston
+794849,Charleston
+764404,Mount Pleasant
+764486,Charleston
+789110,North Charleston
+789116,North Charleston
+794787,North Charleston
+2455622,North Charleston
+2382420,Red Hill
+789115,North Charleston
+764392,Charleston
+794854,Charleston
+819897,North Charleston
+764658,North Charleston
+2502257,Charleston
+764639,North Charleston
+764618,North Charleston
+766423,North Charleston
+2483506,Ravenel
+764181,Charleston
+2319801,Mt. Pleasant
+764345,Charleston
+2455713,North Charleston
+794861,Charleston
+819657,Mount Pleasant
+764512,Charleston
+764484,Charleston
+794761,Charleston
+2332456,Charleston
+2335607,Charleston
+794826,North Charleston
+819729,Charleston
+819709,Charleston
+2382753,Whitesville
+764752,North Charleston
+2382944,Edisto Island
+819695,North Charleston
+764721,North Charleston
+818223,Charleston
+764502,Charleston
+770040,Charleston
+789100,Charleston
+789072,North Charleston
+2329766,North Charleston
+819912,North Charleston
+764860,Charleston
+764726,North Charleston
+789046,North Charleston
+764461,Charleston
+794788,North Charleston
+764242,Charleston
+764380,Mount Pleasant
+764763,North Charleston
+764616,Mt Pleasant
+764337,Charleston
+819892,North Charleston
+794820,North Charleston
+2505938,Charleston
+764349,Mount Pleasant
+819988,Charleston
+2335829,Awendaw
+764294,Charleston
+2335754,Moncks Corner
+764871,Charleston
+794772,Charleston
+764590,Mount Pleasant
+2456250,McClellanville
+764503,Charleston
+798673,North Charleston
+764409,Charleston
+764505,Charleston
+819876,North Charleston
+794862,Charleston
+2382774,Summerville
+764741,North Charleston
+794782,Charleston
+794809,North Charleston
+764556,North Charleston
+764307,Charleston
+764749,North Charleston
+2320181,Charleston
+2335823,McClellanville
+764166,Charleston
+764444,Mt Pleasant
+764321,Charleston
+2384116,Goose Creek
+764429,Charleston
+819980,Charleston
+764268,Charleston
+2335834,Awendaw
+800704,Charleston
+789059,North Charleston
+2455620,Summerville
+819343,Mount Pleasant
+819896,North Charleston
+794833,North Charleston
+2382963,Hollywood
+764338,Charleston
+764554,North Charleston
+764585,North Charleston
+2320916,Mount Pleasant
+764761,North Charleston
+2335595,Charleston
+794871,Mount Pleasant
+2335758,Moncks Corner
+2335526,Charleston
+2382948,Adams Run
+764182,Charleston
+794755,Charleston
+764759,North Charleston
+764259,Charleston
+764270,Charleston
+2332455,Charleston
+800537,Charleston
+789067,North Charleston
+2735480,Charleston
+2382956,Adams Run
+764227,Charleston
+2335757,Moncks Corner
+2387508,Wilder
+2517406,Mount Pleasant
+798685,North Charleston
+2335632,Charleston
+764745,North Charleston
+764692,North Charleston
+764712,North Charleston
+807468,North Charleston
+764366,Mount Pleasant
+764911,Charleston
+764751,North Charleston
+764257,Charleston
+789070,North Charleston
+2505950,Charleston
+764539,North Charleston
+764581,North Charleston
+2483512,Ravenel
+764688,North Charleston
+798670,Charleston
+794777,Charleston
+3878388,North Charleston 
+2388284,Moncks Corner
+2483508,Ravenel
+2382970,Adams Run
+2429163,Charleston
+764397,Charleston
+2517407,Mount Pleasant
+764793,North Charleston
+2382940,Edisto Island
+2335815,Moncks Corner
+2332437,Charleston
+764339,Mount Pleasant
+2384108,Harbour Lake
+2483507,Ravenel
+2554987,North Charleston
+798672,Charleston
+764730,North Charleston
+819904,Hanahan
+819826,North Charleston
+819731,Charleston
+819675,Mount Pleasant
+794824,North Charleston
+2505994,Barrelville
+2382946,Barrelville
+2554980,North Charleston
+789051,North Charleston
+2382429,Moncks Corner
+794856,Charleston
+2388561,Alvin
+764523,North Charleston
+794784,Charleston
+764744,North Charleston
+764861,Charleston
+819987,Charleston
+764483,Charleston
+2329765,Summerville
+2382957,Osborn
+764377,Charleston
+794822,North Charleston
+764533,North Charleston
+764221,Charleston
+764342,Charleston
+764640,North Charleston
+2388563,Honey Hill
+764521,Charleston
+2335824,McClellanville
+764777,North Charleston
+764838,Mt Pleasant
+2483509,Ravenel
+764893,Charleston
+764410,Charleston
+2751919,Pregnall
+819707,Charleston
+764301,Charleston
+819714,Charleston
+2384103,Washington Town
+794819,North Charleston
+2335625,Charleston
+789099,North Charleston
+819925,North Charleston
+764696,North Charleston
+764602,North Charleston
+2559090,North Charleston
+764194,Charleston
+764771,North Charleston
+764834,Mount Pleasant
+819944,North Charleston
+2335755,Moncks Corner
+764913,Charleston
+794798,North Charleston
+2558987,Charleston
+2382769,Sangaree
+2382971,Adams Run
+794858,Charleston
+2335835,Awendaw
+764451,Mt Pleasant
+764786,Charleston
+2387505,Swamp Fox
+819680,Charleston
+789061,North Charleston
+764720,North Charleston
+807731,North Charleston
+764175,Charleston
+819867,Charleston
+2618170,Charleston
+764591,North Charleston
+794776,Charleston
+764541,North Charleston
+819833,North Charleston
+2382754,Goose Creek
+764627,North Charleston
+819822,Charleston
+2382422,Charleston
+764756,North Charleston
+764781,North Charleston
+2382771,Summerville
+2382255,Bonneau
+2382291,St. George
+2382960,Hollywood
+764691,North Charleston
+2320938,North Charleston
+2382773,Summerville
+798122,Charleston
+794768,Charleston
+819678,North Charleston
+2382488,Cross Cross Roads
+794827,North Charleston
+819719,Charleston
+2335618,Charleston
+764475,Charleston
+764330,Charleston
+819903,North Charleston
+2335825,Awendaw
+819685,Charleston
+800540,Charleston
+2456234,McClellanville
+2388288,Judge Town
+764619,North Charleston
+794870,Mt Pleasant
+2538026,Charleston
+789064,North Charleston
+2611937,Pine Forest
+794837,Charleston
+764251,Charleston
+764903,Charleston
+764333,Charleston
+798120,James Island
+2455621,North Charleston
+2388291,Eutawville
+764605,North Charleston
+764230,Charleston
+764766,North Charleston
+819901,North Charleston
+2536279,Charleston
+764283,Charleston
+789066,North Charleston
+800546,Charleston
+2382755,Goose Creek
+819724,Charleston
+794756,Charleston
+794853,Mount Pleasant
+764373,Charleston
+2456238,St. George
+819902,North Charleston
+764328,Charleston
+2382428,Old Cordesville
+764341,Mount Pleasant
+767194,North Charleston
+794839,Charleston
+808175,North Charleston
+2335620,Charleston
+819329,Charleston
+789114,North Charleston
+2554978,North Charleston
+764587,North Charleston
+807759,North Charleston
+764212,Charleston
+2335819,McClellanville
+789118,North Charleston
+764836,Mount Pleasant
+764391,Charleston
+800701,Charleston
+2335616,Huskum Corner Cross Roads
+764697,North Charleston
+2335756,Moncks Corner
+764322,Charleston
+789097,Charleston
+3878477,Charleston
+764684,North Charleston
+819824,North Charleston
+798915,Charleston
+764740,North Charleston
+766436,North Charleston
+819720,Charleston
+798683,Charleston
+764755,North Charleston
+2573648,Mount Pleasant
+796291,West Ashley
+764352,Charleston
+2382423,Charleston
+2382958,Meggett
+2332211,Charleston
+789047,North Charleston
+2320919,Mt Pleasant
+764762,North Charleston
+764792,Charleston
+2554989,North Charleston
+764764,North Charleston
+819651,Mount Pleasant
+789111,North Charleston
+2456334,Charleston
+789056,North Charleston
+2382425,Mount Pleasant
+819674,Mount Pleasant
+819654,Mount Pleasant
+764859,Charleston
+764393,Charleston
+764747,North Charleston
+2501529,Mount Pleasant
+794789,North Charleston
+2335830,Awendaw
+764399,Charleston
+2332451,Huskum Corner Cross Roads
+2543545,North Charleston
+848056,Charleston
+2501578,Charleston
+794769,Charleston
+764216,Charleston
+764355,Charleston
+807758,North Charleston
+2335615,Charleston
+764262,Charleston
+2388625,North Charleston
+2455711,Charleston
+764790,Charleston
+2335820,McClellanville
+2382264,Summerville
+789055,North Charleston
+789057,North Charleston
+848053,Charleston
+819845,Charleston
+819906,Hanahan
+2335814,Moncks Corner
+764180,James Island
+764295,Charleston
+764516,Charleston
+764501,Charleston
+764573,Mt Pleasant
+2382414,Moncks Corner
+819671,Mount Pleasant
+2388498,Moss Grove
+794801,North Charleston
+2335812,Moncks Corner
+764610,North Charleston
+764822,Hanahan
+764676,North Charleston
+2388277,Moncks Corner
+794807,North Charleston
+2332188,Hanahan
+808137,North Charleston
+807164,North Charleston
+764801,Charleston
+798690,Charleston
+819682,North Charleston
+794763,Charleston
+764662,North Charleston
+2505939,Charleston
+2326332,North Charleston
+2335822,McClellanville
+4161144,Charleston
+764862,Charleston
+799179,North Charleston
+764803,North Charleston
+764173,Charleston
+2559088,North Charleston
+794757,Charleston
+819984,Charleston
+4230522,North Charleston
+764229,Charleston
+764168,Charleston
+2388275,Moncks Corner
+2388278,Moncks Corner
+764914,Summerville
+794803,North Charleston
+764678,North Charleston
+764170,Charleston
+2382947,Willtown Bluff
+764382,Mount Pleasant
+764734,North Charleston
+805268,Charleston
+798133,Charleston
+789063,North Charleston
+2456233,Moncks Corner
+764421,Charleston
+764344,Mount Pleasant
+2329735,Mt Pleasant
+819668,Mount Pleasant
+819706,Charleston
+2382965,Hollywood
+4245777,North Charleston
+794828,North Charleston
+764644,North Charleston
+2505946,Charleston
+798132,Charleston
+764513,Charleston
+819698,Charleston
+2506352,Charleston
+764438,Charleston
+2505945,Folly Beach 
+2382967,Hollywood
+819865,Charleston
+2388624,Charleston
+770037,Charleston
+764868,Charleston
+2332189,Charleston
+2384105,Goose Creek
+2382941,Edisto Island
+764863,Charleston
+789050,North Charleston
+764243,Charleston
+800693,North Charleston
+2574553,North Charleston
+764246,Charleston
+2335821,Tibwin
+764517,Charleston
+2332230,North Charleston
+764402,Charleston
+764767,North Charleston
+789137,Hanahan
+764482,Charleston
+2335634,Charleston
+764433,Charleston
+764465,Mount Pleasant
+764869,Charleston
+2735482,Charleston
+781902,North Charleston
+764773,North Charleston
+794874,North Charleston
+2332448,Huskum Corner Cross Roads
+2505944,Charleston
+764572,North Charleston
+794783,Charleston
+2382950,Shiloh
+2332225,Moncks Corner
+2326331,Charleston
+764336,Charleston
+764241,Charleston
+764514,Mount Pleasant
+800548,Charleston
+764281,Charleston
+819328,Charleston
+800535,Charleston
+2382949,Adams Run
+819718,Charleston
+764717,North Charleston
+764360,Mount Pleasant
+2320917,Mt Pleasant
+2382959,Hollywood
+2517691,North Charleston
+798671,Charleston
+764663,North Charleston
+764568,North Charleston
+808166,Charleston
+764612,North Charleston
+2740395,North Charleston
+794779,Charleston
+4245778,North Charleston
+798116,North Charleston
+764529,North Charleston
+764459,Charleston
+2505952,Charleston
+2382964,Hollywood
+764325,Charleston
+764724,North Charleston
+808176,Charleston
+764679,North Charleston
+2382287,Byrd
+794758,Charleston
+2562467,Charleston
+2456422,Hanahan
+819716,Charleston
+789101,North Charleston
+2505991,Meggett
+764802,Charleston
+2382968,Charleston
+764754,North Charleston
+794804,North Charleston
+789068,North Charleston
+2335617,Charleston
+789054,North Charleston
+819981,Charleston
+764528,Mount Pleasant
+764858,Charleston
+794823,North Charleston
+819697,Charleston
+764395,Charleston
+764522,Mount Pleasant
+764632,North Charleston
+798142,North Charleston
+2335831,Awendaw
+764224,Charleston
+794855,Mount Pleasant
+799178,North Charleston
+819909,Hanahan
+819658,Mount Pleasant
+2388567,Alvin
+764276,Charleston
+807626,Charleston
+764659,North Charleston
+2335752,Moncks Corner
+2332459,Charleston
+2332446,Huskum Corner Cross Roads
+798124,Charleston
+839430,North Charleston
+794851,Charleston
+794765,Charleston
+2382953,Shiloh
+764179,Charleston
+819894,North Charleston
+798679,North Charleston
+2429161,Charleston
+2382745,Charleston
+764272,Charleston
+2388564,Prioleau
+764805,Mt Pleasant
+2483548,Ravenel
+2382286,Byrd
+819898,North Charleston
+764646,North Charleston
+819684,Charleston
+794866,Charleston
+764576,North Charleston
+764689,North Charleston
+764584,North Charleston
+764365,Mount Pleasant
+2505941,Charleston
+819885,North Charleston
+819655,Mount Pleasant
+2382288,Byrd
+2554990,North Charleston
+764916,Charleston
+2382752,Moncks Corner
+2332332,North Charleston
+789071,North Charleston
+770038,Charleston
+764807,North Charleston
+764371,Charleston
+819873,North Charleston
+794850,Charleston
+4161143,Charleston
+764613,North Charleston
+794790,North Charleston
+764826,Mount Pleasant
+764187,Charleston
+764560,North Charleston
+2505989,Hollywood
+819683,Charleston
+764387,Charleston
+764441,Charleston
+764563,North Charleston
+794825,North Charleston
+764750,North Charleston
+2455714,Charleston
+794760,Charleston
+764312,Charleston
+764356,Charleston
+764214,Charleston
+819911,North Charleston
+2332442,Charleston
+819907,Hanahan
+848055,Charleston
+764746,North Charleston
+2332444,Charleston
+2429164,Charleston
+819905,Hanahan
+2562248,Charleston
+798684,Charleston
+789104,North Charleston
+2332154,Charleston
+2382290,St. George
+2615489,Charleston
+2382966,Hollywood
+789065,North Charleston
+764165,Charleston
+764694,Mount Pleasant
+819893,North Charleston
+764178,Charleston
+794759,Charleston
+764589,North Charleston
+794841,Charleston
+764851,Mt Pleasant
+800689,North Charleston
+764420,Charleston
+794786,North Charleston
+2388286,Moncks Corner
+764671,North Charleston
+800698,Mount Pleasant
+802554,North Charleston
+764332,Charleston
+764169,Charleston
+2382249,Charleston
+766429,North Charleston
+764770,North Charleston
+764622,North Charleston
+2332210,James Island
+798145,North Charleston
+764685,North Charleston
+764727,North Charleston
+819712,Charleston
+819705,Charleston
+764478,Charleston
+819341,Mount Pleasant
+764273,Charleston
+794872,Mount Pleasant
+2517384,North Charleston
+764626,Mount Pleasant
+764600,North Charleston
+764163,Charleston
+764466,Mount Pleasant
+764844,Charleston
+2382265,Hunters Creek
+2335826,Awendaw
+764842,Charleston
+819652,Mount Pleasant
+764821,North Charleston
+819722,Charleston
+764406,Charleston
+2382961,Hollywood
+2332436,Johns Island
+794876,North Charleston
+764707,North Charleston
+764367,Charleston
+3463394,North Charleston
+764654,North Charleston
+2537757,North Charleston
+764383,Charleston
+789074,North Charleston
+764915,North Charleston
+789107,North Charleston
+764839,North Charleston
+764190,Charleston
+2382251,Summerville
+2559092,North Charleston
+789044,North Charleston
+764544,North Charleston
+2388565,Macedonia
+764652,North Charleston
+764233,Charleston
+764500,Charleston
+2320942,North Charleston 
+764219,Charleston
+798688,Charleston
+794842,Mount Pleasant
+764376,Charleston
+2387509,Santee Circle
+2456406,Hanahan
+764534,Charleston
+764649,North Charleston
+800536,Charleston
+764508,Charleston
+764235,Charleston
+2384106,Goose Creek
+2384104,Pine Forest
+819730,Charleston
+2335630,Charleston
+2335833,Awendaw
+819702,Charleston
+764795,North Charleston
+764428,Charleston
+764864,North Charleston
+819900,North Charleston
+2483565,Charleston
+764665,North Charleston
+2382962,Hollywood
+764417,Charleston
+2332458,Charleston
+764804,Charleston
+2382954,Osborn
+819723,Charleston
+849851,Charleston
+764274,Charleston
+764286,Charleston
+2382416,Old Joe
+2320183,North Charleston
+2335753,Moncks Corner
+2382942,Edisto Island
+2505942,Charleston
+2335606,Charleston
+764557,North Charleston
+2382779,Ladson
+764277,Charleston
+789095,Charleston
+819847,North Charleston
+2382951,Shiloh
+764788,Charleston
+764184,Charleston
+764783,Mount Pleasant
+764370,Charleston
+2384117,Pine Forest
+764706,North Charleston
+819821,North Charleston
+764398,Charleston
+2511769,Charleston
+2382289,Pregnall
+789094,Charleston
+764315,Charleston
+764228,Charleston
+807732,North Charleston
+764346,Charleston
+819908,Hanahan
+764490,Charleston
+794860,Charleston
+764631,North Charleston
+764806,North Charleston
+2619312,Isle of Palms
+764311,Charleston
+2335621,Charleston
+819886,North Charleston
+764840,Mt Pleasant
+764253,Charleston
+764498,Mt Pleasant
+764617,North Charleston
+764317,Charleston
+764293,Charleston
+2394670,North Charleston
+764621,North Charleston
+764674,North Charleston
+764837,Mt Pleasant
+2382253,Greeleyville
+2335832,Awendaw
+819985,Charleston
+789122,North Charleston
+2559086,North Charleston
+764655,North Charleston
+2506687,North Charleston
+800706,Charleston
+2483511,Ravenel
+2388290,Prioleau
+764423,Mount Pleasant
+764313,Charleston
+764493,Charleston
+764606,Mount Pleasant
+2320182,North Charleston
+789096,Charleston
+764580,North Charleston
+764467,Mount Pleasant
+2429165,Charleston
+2324962,Moncks Corner
+2505953,Charleston
+764865,Charleston
+764535,North Charleston
+764244,Charleston
+764245,Charleston
+2559087,North Charleston
+2320918,North Charleston
+789120,North Charleston
+764265,Charleston
+764453,Charleston
+2559089,North Charleston
+2519779,North Charleston
+764331,Charleston
+764389,Charleston
+764381,Charleston
+764440,Charleston
+789062,North Charleston
+789053,North Charleston
+764326,Charleston
+789124,Charleston
+764238,Charleston
+764308,Charleston
+764264,Charleston
+764485,Charleston
+4230521,North Charleston
+798675,North Charleston
+764445,Charleston
+764799,Charleston
+848054,Charleston
+764628,North Charleston
+794815,North Charleston
+794831,North Charleston
+2536280,Charleston
+764462,Charleston
+2332441,Charleston
+2505943,Charleston
+764499,Charleston
+764526,North Charleston
+764309,Charleston
+764287,Charleston
+2384107,Hanahan
+819849,North Charleston
+805195,North Charleston
+764249,Charleston
+2332439,Charleston
+2506703,Charleston
+764256,Charleston
+2387506,Old Peru

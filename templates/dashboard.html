@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CARTA Flood Alert Dashboard</title>
+<!-- Reloads the whole page every 60 seconds so a screen left open all
+     morning picks up the next scheduled 6am/6pm refresh on its own.
+     Trade-off: this also collapses any route rows the viewer had
+     expanded, since it's a full page reload, not a partial update. -->
+<meta http-equiv="refresh" content="60">
+<style>
+  :root {
+    --green: #1e7e34; --green-bg: #e6f4ea;
+    --yellow: #8a6100; --yellow-bg: #fff3cd;
+    --red: #a4161a; --red-bg: #fbe4e4;
+    --border: #d0d0d0;
+  }
+  body {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #1a1a1a;
+    background: #fafafa;
+  }
+  header { margin-bottom: 24px; }
+  h1 { margin-bottom: 4px; }
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #555;
+  }
+  .error-banner {
+    background: var(--red-bg); color: var(--red);
+    border: 1px solid var(--red);
+    padding: 10px 14px; border-radius: 6px; margin-bottom: 16px;
+  }
+  .panel {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+    background: white;
+  }
+  .panel h2 { margin-top: 0; }
+  .summary-card {
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 1.05em;
+  }
+  .summary-card.green { background: var(--green-bg); color: var(--green); }
+  .summary-card.yellow { background: var(--yellow-bg); color: var(--yellow); }
+  .summary-card.red { background: var(--red-bg); color: var(--red); }
+  .summary-card .severity { font-weight: 700; font-size: 1.2em; }
+  .note {
+    font-size: 0.9em; font-style: italic; color: #555;
+    background: #f0f0f0; padding: 8px 12px; border-radius: 6px;
+    margin-bottom: 14px;
+  }
+  .route-row {
+    border: 1px solid var(--border);
+    border-left-width: 6px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  .route-row.green { border-left-color: var(--green); }
+  .route-row.yellow { border-left-color: var(--yellow); }
+  .route-row.red { border-left-color: var(--red); }
+  .route-row summary {
+    cursor: pointer;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .route-row summary::-webkit-details-marker { display: none; }
+  .route-name { font-weight: 600; }
+  .status-pill {
+    font-size: 0.8em;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 999px;
+  }
+  .status-pill.green { background: var(--green-bg); color: var(--green); }
+  .status-pill.yellow { background: var(--yellow-bg); color: var(--yellow); }
+  .status-pill.red { background: var(--red-bg); color: var(--red); }
+  .route-detail { padding: 4px 14px 14px; }
+  table.stops { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+  table.stops th, table.stops td {
+    text-align: left; padding: 4px 8px; font-size: 0.9em;
+    border-bottom: 1px solid #eee;
+  }
+  .alert-text {
+    background: #f5f5f5; border: 1px solid var(--border);
+    border-radius: 6px; padding: 10px; font-family: ui-monospace, monospace;
+    font-size: 0.85em; white-space: pre-wrap; margin-bottom: 8px;
+  }
+  button.copy-btn, button.refresh-btn {
+    font-size: 0.85em; padding: 5px 12px; border-radius: 5px;
+    border: 1px solid var(--border); background: white; cursor: pointer;
+  }
+  button.copy-btn:hover, button.refresh-btn:hover { background: #f0f0f0; }
+  footer { font-size: 0.8em; color: #777; margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>CARTA Flood Alert Dashboard</h1>
+  <div class="meta-row">
+    <span>
+      {% if generated_at %}
+        Last updated: {{ generated_at.strftime("%A, %B %d at %I:%M %p") }}
+      {% else %}
+        Not yet refreshed
+      {% endif %}
+      &middot; auto-refreshes every 60s &middot; scheduled refresh 6am / 6pm daily
+    </span>
+    <form action="/refresh" method="post" style="margin:0;">
+      <button class="refresh-btn" type="submit">Refresh Now</button>
+    </form>
+  </div>
+</header>
+
+{% if error %}
+<div class="error-banner">
+  Last refresh attempt failed ({{ error }}) -- showing the most recent successful data above.
+</div>
+{% endif %}
+
+{% macro route_rows(routes) %}
+  {% for r in routes %}
+  <details class="route-row {{ r.color }}">
+    <summary>
+      <span class="route-name">Route {{ r.route }}{% if r.name %} ({{ r.name }}){% endif %}</span>
+      <span class="status-pill {{ r.color }}">{{ r.status_label }}</span>
+    </summary>
+    <div class="route-detail">
+      {% if r.stops %}
+        <table class="stops">
+          <tr><th>Stop</th><th>Elevation</th></tr>
+          {% for s in r.stops %}
+          <tr><td>{{ s.stop_name }}</td><td>{{ "%.1f"|format(s.elevation_ft|float) }} ft</td></tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p>No flood impact currently expected on this route.</p>
+      {% endif %}
+
+      {% if r.alert_text %}
+        <pre class="alert-text" id="alert-{{ r.route }}">{{ r.alert_text }}</pre>
+        <button class="copy-btn" id="btn-{{ r.route }}" onclick="copyAlert('{{ r.route }}')">Copy Alert Text</button>
+      {% endif %}
+    </div>
+  </details>
+  {% endfor %}
+{% endmacro %}
+
+{% if panel1 %}
+<div class="panel">
+  <h2>{{ panel1.label }}</h2>
+  <div class="summary-card {{ panel1.color }}">
+    <div class="severity">{{ panel1.severity }}{% if panel1.severity != "NONE" %} FLOODING EXPECTED{% else %} -- no flooding expected{% endif %}</div>
+    {% if panel1.tide_time %}
+      <div>Highest tide: {{ "%.1f"|format(panel1.tide_ft) }} ft at {{ panel1.tide_time }}</div>
+    {% endif %}
+    {% if panel1.alert_event %}
+      <div>Active NWS alert: {{ panel1.alert_event }} (+{{ "%.1f"|format(panel1.surge_ft) }} ft estimated surge)</div>
+    {% else %}
+      <div>No active NWS coastal flood advisory or warning right now.</div>
+    {% endif %}
+    <div>Combined water level estimate: {{ "%.1f"|format(panel1.combined_ft) }} ft</div>
+    {% if panel1.window_start %}
+      <div>Flood risk window: {{ panel1.window_start }} &ndash; {{ panel1.window_end }}</div>
+    {% endif %}
+  </div>
+
+  {{ route_rows(panel1.routes) }}
+</div>
+{% endif %}
+
+{% if panel2 %}
+<div class="panel">
+  <h2>{{ panel2.label }}</h2>
+  <div class="note">{{ panel2.note }}</div>
+  <div class="summary-card {{ panel2.color }}">
+    <div class="severity">{{ panel2.severity }}{% if panel2.severity != "NONE" %} flooding possible{% else %} -- no flooding expected{% endif %}</div>
+    {% if panel2.tide_time %}
+      <div>Highest astronomical tide: {{ "%.1f"|format(panel2.tide_ft) }} ft at {{ panel2.tide_time }}</div>
+    {% endif %}
+  </div>
+
+  {{ route_rows(panel2.routes) }}
+</div>
+{% endif %}
+
+{% if not panel1 and not panel2 %}
+<p>No data yet -- waiting on the first refresh to complete.</p>
+{% endif %}
+
+<footer>
+  Data sources: NOAA CO-OPS Station {{ "8665530" }} (tide predictions) &middot;
+  NWS Alerts API, Zone SCZ047 (coastal flood advisories) &middot;
+  CARTA GTFS feed + USGS 3DEP elevation (stop-level flood risk model).
+  This is a screening model, not a validated hydrological forecast.
+</footer>
+
+<script>
+function copyAlert(route) {
+  const text = document.getElementById('alert-' + route).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('btn-' + route);
+    const original = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = original; }, 1500);
+  });
+}
+</script>
+
+</body>
+</html>

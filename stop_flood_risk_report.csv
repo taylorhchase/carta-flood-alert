@@ -1,0 +1,156 @@
+stop_id,stop_name,routes,lat,lon,elevation_ft,flood_risk,triggers_at_harbor_ft,flood_events_per_year
+764263,Courtenay Dr / Charleston Center Dr,203,32.7833568880765,-79.9509626695957,2.56,MINOR,7.0,25
+764272,Bee St / VA Hospital,213,32.7851627359348,-79.9540927732742,3.19,MINOR,7.0,25
+800541,Courtenay Dr / Doughty St,213,32.78393854659994,-79.95106513328311,3.21,MINOR,7.0,25
+4212169,Concord St / Inspection St,210,32.78822149,-79.926688351,3.41,MINOR,7.0,25
+764306,Calhoun St / East Bay St,210,32.78865545563838,-79.93000871305114,3.43,MINOR,7.0,25
+764858,America St / Reid St,213,32.7937057437404,-79.9348408948426,3.45,MINOR,7.0,25
+764866,Market St / East Bay St,211,32.78125399619175,-79.92706617167062,3.97,MINOR,7.0,25
+819712,Calhoun St / Ashley Ave,"213, XP1",32.7833712703448,-79.9453885717638,4.02,MINOR,7.0,25
+764325,President St / Line St,213,32.7913298045829,-79.9523590698196,4.3,MINOR,7.0,25
+764291,Spring St / Hagood Ave,30,32.78714117432,-79.9540140572344,4.34,MINOR,7.0,25
+764346,Mary St / America St,213,32.7923995712998,-79.934260468828,4.48,MINOR,7.0,25
+4253834,Washington St / Laurens St,210,32.786619941065894,-79.92830178318157,4.6,MINOR,7.0,25
+764327,Concord St / Aquarium Wharf,210,32.7903652376867,-79.926941193017,4.64,MINOR,7.0,25
+770038,Calhoun St / Elizabeth St,210,32.7879474842531,-79.9316148661601,4.67,MINOR,7.0,25
+764303,Calhoun St / Alexander St,210,32.7880669125705,-79.9310056443073,4.77,MINOR,7.0,25
+800547,Calhoun St / Ashley Ave (farside),XP1,32.78351286013935,-79.94442525873336,4.79,MINOR,7.0,25
+764345,Fishburne St / President St,213,32.7927988172252,-79.9531147319876,4.95,MINOR,7.0,25
+764282,Lockwood Dr / Westedge St,"203, 213",32.7864056081554,-79.957395735665,4.98,MINOR,7.0,25
+764268,Jonathan Lucas St / MUSC Quad,203,32.7847961037789,-79.9485927022554,5.05,MINOR,7.0,25
+764296,Cannon St / President St,"213, 30",32.787545951,-79.950165379,5.27,MINOR,7.0,25
+764252,Calhoun St / Jonathan Lucas St (near side),XP1,32.782507387,-79.947983801,5.47,MINOR,7.0,25
+764224,Vendue Range / Concord St,211,32.7788709150971,-79.9257126538868,5.48,MINOR,7.0,25
+764287,Cannon St / Wescott St,30,32.7870936101025,-79.9513797518493,5.52,MODERATE,7.5,8
+764281,President St / Bee St,203,32.78682711783431,-79.95016227949134,5.52,MODERATE,7.5,8
+800540,Calhoun St / Jonathan Lucas St (far side),"213, XP1",32.782592753106,-79.94818214186,5.55,MODERATE,7.5,8
+764317,Line St / Hagood St,203,32.789597001,-79.956316054,5.6,MODERATE,7.5,8
+764328,Fishburne St / Westedge St,213,32.790471409866,-79.9587762099565,5.6,MODERATE,7.5,8
+4248799,Concord St / Market St,211,32.781265541,-79.925821916,5.6,MODERATE,7.5,8
+764309,Lockwood Dr / Brittlebank Park,213,32.788333015,-79.959860824,5.6,MODERATE,7.5,8
+764304,Spring St / President St,30,32.78862966349922,-79.95082631093265,5.61,MODERATE,7.5,8
+764264,Calhoun St / Smith St,213,32.7841195082468,-79.942388552154,5.67,MODERATE,7.5,8
+2326331,King St / Huger St,20,32.800508426,-79.948818367,6.57,MAJOR,8.0,3
+800535,Calhoun St / Meeting St (near side),210,32.7869381982238,-79.9338643688932,6.66,MAJOR,8.0,3
+764239,Wentworth St / Coming St,210,32.78126171153015,-79.93713995169507,6.78,MAJOR,8.0,3
+764409,King St / Huger St,20,32.79994320399335,-79.94798645969033,6.79,MAJOR,8.0,3
+2388624,Savannah Hwy / Apollo Rd,30,32.783124391,-79.992775474,7.14,MAJOR,8.0,3
+796291,Skylark Dr / Savannah Hwy,30,32.790728877567,-80.030448236508,7.22,MAJOR,8.0,3
+794767,Savannah Hwy / Apollo Rd,30,32.78328050892421,-79.99246279425876,7.27,MAJOR,8.0,3
+798915,America St / Columbus St,213,32.7961482297439,-79.9361052126513,7.34,MAJOR,8.0,3
+764321,Fishburne St / Horizon St Park & Ride,203,32.7901805256245,-79.9573816028157,7.52,no risk under these thresholds,,
+764868,Meeting St / S Market St,20,32.780550676,-79.931468296,7.57,no risk under these thresholds,,
+770040,Calhoun St / St Philip St,"210, XP1",32.7850574049914,-79.9382109117494,7.59,no risk under these thresholds,,
+800536,Calhoun St / Meeting St (far side),210,32.78671534071594,-79.93403834068593,7.64,no risk under these thresholds,,
+764867,Market St / Meeting St,211,32.78091704,-79.931079396,7.85,no risk under these thresholds,,
+2335526,Citadel Mall / S. Park Circle,30,32.795338273021954,-80.03160751002756,8.12,no risk under these thresholds,,
+764315,Visitors Center / Charleston Museum,"20, XP1",32.7894568091272,-79.9362240458332,8.21,no risk under these thresholds,,
+4255574,Westedge St / Line St,203,32.78999585782603,-79.95904663780406,8.35,no risk under these thresholds,,
+819697,Skylark Dr / Savannah Hwy,30,32.7907442021939,-80.0303090493867,8.4,no risk under these thresholds,,
+764871,Charleston Museum / Visitors Center,"20, 211, XP1",32.7894670413968,-79.9360165838242,8.53,no risk under these thresholds,,
+764312,Cannon St / Rutledge Ave,"213, 30",32.7889657538162,-79.9471708462947,8.56,no risk under these thresholds,,
+764313,Savannah Hwy / Orleans Rd,30,32.789581864899276,-80.02854192942516,8.72,no risk under these thresholds,,
+764256,Meeting St / Hasell St,"20, 211",32.7827754128671,-79.9317210468282,8.73,no risk under these thresholds,,
+764237,Meeting St / Market St,20,32.7811886085276,-79.9316917748803,8.9,no risk under these thresholds,,
+764229,Meeting St / Cumberland St,20,32.77944697660129,-79.93148098771633,8.93,no risk under these thresholds,,
+794755,Meeting St / Cumberland St,20,32.7793345471892,-79.9313088597062,9.2,no risk under these thresholds,,
+819680,Savannah Hwy / Orleans Rd,30,32.789232352,-80.027617839,9.35,no risk under these thresholds,,
+800539,Calhoun St / St Philip St,"213, XP1",32.7854435202881,-79.9375217009007,9.56,no risk under these thresholds,,
+794759,Meeting St / Mary St,"20, 211",32.7911731180735,-79.9371369681369,9.63,no risk under these thresholds,,
+2332189,King St / Moultrie St,20,32.80143890642145,-79.94971164832599,9.71,no risk under these thresholds,,
+794763,King St / Congress St,20,32.799193317627186,-79.9471388845169,9.75,no risk under these thresholds,,
+794757,Meeting St / Calhoun St,"20, 211",32.7863235771496,-79.9339623671332,9.78,no risk under these thresholds,,
+764337,Meeting St / Mary St,"20, 213",32.79138090321115,-79.93745592224788,9.82,no risk under these thresholds,,
+764869,Meeting St / Wentworth St,20,32.78359843109767,-79.93225966700722,9.83,no risk under these thresholds,,
+764245,Savannah Hwy / Avondale Ave,30,32.78198718899249,-79.98504504991384,9.86,no risk under these thresholds,,
+764243,Savannah Hwy / Nicholson St,30,32.7817774232762,-79.9850237471003,9.94,no risk under these thresholds,,
+764342,Cannon St / St Philip St,"213, 30",32.791520877,-79.941707837,9.94,no risk under these thresholds,,
+808176,St Philip St / Calhoun St,210,32.7858365786951,-79.93813701806468,9.96,no risk under these thresholds,,
+764399,King St / Congress St,20,32.79904362574088,-79.94710038962438,9.98,no risk under these thresholds,,
+764395,Citadel Mall,30,32.79855617538,-80.028898535801,10.04,no risk under these thresholds,,
+794779,Spring St / Rutledge Ave,30,32.790371171,-79.947126119,10.06,no risk under these thresholds,,
+764242,Savannah Hwy / Moore Dr,30,32.7813199000377,-79.9811445765564,10.1,no risk under these thresholds,,
+764421,King St / Cleveland St,20,32.802288831,-79.950625274,10.15,no risk under these thresholds,,
+764371,King St / Line St,20,32.7951756140397,-79.9430098647352,10.16,no risk under these thresholds,,
+764238,Savannah Hwy / Campbell Dr,30,32.781130032,-79.981168967,10.24,no risk under these thresholds,,
+3878477,E Bay St / N Atlantic Wharf,211,32.7777084959307,-79.9269300864133,10.26,no risk under these thresholds,,
+764844,Broad St / Meeting St,211,32.7763616839302,-79.9314514375815,10.34,no risk under these thresholds,,
+794761,King St / Line St,20,32.79482263754441,-79.9425743014956,10.38,no risk under these thresholds,,
+764332,Cannon St / Coming St,"213, 30",32.790783932872145,-79.94329923588805,10.41,no risk under these thresholds,,
+2382745,King St / Poplar St,20,32.80786673380868,-79.95105235594288,10.42,no risk under these thresholds,,
+764305,Cannon St / Ashley Ave,30,32.78851613150141,-79.94813405409516,10.59,no risk under these thresholds,,
+764443,King St / Poplar St,20,32.807618124306146,-79.951124154545,10.6,no risk under these thresholds,,
+770037,Warren St / St Philip St,210,32.78776655687855,-79.93922135787659,10.63,no risk under these thresholds,,
+2752244,King St / Engel St,20,32.7962777244014,-79.9441276249484,10.65,no risk under these thresholds,,
+764216,Meeting St / Chalmers St,20,32.7772564062101,-79.93104020138088,10.65,no risk under these thresholds,,
+819714,King St / Cleveland St,20,32.802336532878826,-79.95088781114718,10.66,no risk under these thresholds,,
+764235,King St / Market St,211,32.78082641335041,-79.93333496236482,10.8,no risk under these thresholds,,
+764440,King St / Simons St,20,32.80660680911933,-79.95081254756361,10.86,no risk under these thresholds,,
+4231006,Columbus St / Nassau St,213,32.7954101481425,-79.9385379394064,10.88,no risk under these thresholds,,
+764307,Visitors Center on John St,"210, 211, 213",32.7889398725929,-79.936319226322,10.89,no risk under these thresholds,,
+794758,Meeting St / Charlotte St,211,32.788347516,-79.935282752,10.91,no risk under these thresholds,,
+764336,Spring St / Ashe St,30,32.791359102184096,-79.94504009481318,10.92,no risk under these thresholds,,
+764331,King St / Morris St,211,32.7906388372541,-79.9396718749386,10.93,no risk under these thresholds,,
+764257,St Philip St / Liberty St,210,32.782593271,-79.935930486,10.95,no risk under these thresholds,,
+800548,Meeting St / Columbus St,XP1,32.79443885334682,-79.93931777949064,11.03,no risk under these thresholds,,
+764251,Coming St / George St,210,32.78363371941603,-79.93873314277317,11.11,no risk under these thresholds,,
+764249,King St / Wentworth St,211,32.782260980776655,-79.93401272650526,11.12,no risk under these thresholds,,
+2501578,Meeting St / Queen St,20,32.778157542,-79.931304506,11.13,no risk under these thresholds,,
+764262,Savannah Hwy / Farmfield Ave,30,32.78376878910932,-79.9963090800554,11.24,no risk under these thresholds,,
+794772,Savannah Hwy / White Oak Dr,30,32.7865481602272,-80.0110995861366,11.25,no risk under these thresholds,,
+764228,King St / Clifford St,211,32.7793281397368,-79.9331419364165,11.31,no risk under these thresholds,,
+764279,Calhoun St / King St,210,32.78562017819019,-79.93659434009453,11.39,no risk under these thresholds,,
+807626,King St / Grove St,20,32.8037647239224,-79.9511024301286,11.44,no risk under these thresholds,,
+764221,King St / Queen St,211,32.77791304401184,-79.93297960230842,11.57,no risk under these thresholds,,
+819715,King St / Broad St,20,32.7766956625536,-79.9328241437529,11.59,no risk under these thresholds,,
+800538,Broad St / Church St,211,32.776604039,-79.929046717,11.72,no risk under these thresholds,,
+764370,Meeting St / Spring St SB,"20, 213, XP1",32.79414327210064,-79.93930564632946,11.79,no risk under these thresholds,,
+794768,Savannah Hwy / West Oak Forest Dr,30,32.7840365300919,-79.99669159125636,11.84,no risk under these thresholds,,
+764383,King St / Carolina St,20,32.7972576310146,-79.9449983007245,11.86,no risk under these thresholds,,
+789094,Meeting St / Woolfe St,"20, 211, 30",32.7930197310333,-79.938353843212,11.86,no risk under these thresholds,,
+764900,King St / Cypress St,20,32.80932224407117,-79.95148657588223,11.87,no risk under these thresholds,,
+794756,Meeting St / George St,"20, 211",32.784499747648965,-79.93268379222819,11.88,no risk under these thresholds,,
+800537,King St / Calhoun St,211,32.785586967252,-79.9361818226411,11.88,no risk under these thresholds,,
+764459,King St / Peachtree St,20,32.81012370792499,-79.95149465254062,11.97,no risk under these thresholds,,
+764438,King St / Romney St,20,32.806172418810895,-79.9509156413095,12.11,no risk under these thresholds,,
+794771,1500 Savannah Hwy,30,32.7857022879767,-80.0062453157866,12.12,no risk under these thresholds,,
+764352,Spring St / King St,30,32.792947929380915,-79.94165910844046,12.13,no risk under these thresholds,,
+764429,King St / Poinsett St,20,32.8049003618684,-79.9508247498104,12.15,no risk under these thresholds,,
+764916,Transit Mall,30,32.789960233,-79.937896692,12.16,no risk under these thresholds,,
+794764,Savannah Hwy / Wesley Dr,30,32.779778802164,-79.972438504502,12.2,no risk under these thresholds,,
+764283,Savannah Hwy / White Oak Dr,30,32.7864280277772,-80.0115334067417,12.22,no risk under these thresholds,,
+764230,Savannah Hwy / Wesley Dr,30,32.7795225528725,-79.9722739142731,12.29,no risk under these thresholds,,
+794769,Savannah Hwy / Wateree Dr,30,32.78456512744867,-79.99972579427504,12.3,no risk under these thresholds,,
+764176,James Island Walmart (Park & Ride),XP1,32.72216430606282,-79.96858402111744,12.36,no risk under these thresholds,,
+794760,Columbus St / King St,20,32.793994985938255,-79.94153221428267,12.42,no risk under these thresholds,,
+2536278,Meeting St / Burns Ln,20,32.7859460659041,-79.9338736664394,12.42,no risk under these thresholds,,
+794766,Savannah Hwy / Radio Rd,30,32.78256562815827,-79.9882958347996,12.46,no risk under these thresholds,,
+764233,Savannah Hwy / West Harrison Rd,30,32.78008109927472,-79.97430664692223,12.55,no risk under these thresholds,,
+764277,Savannah Hwy / Markfield Dr,30,32.7855717691542,-80.0066527811636,12.68,no risk under these thresholds,,
+764270,Savannah Hwy / Briarcliff Dr,30,32.784860318210704,-80.00257787702851,12.69,no risk under these thresholds,,
+819684,Savannah Hwy / Parkwood Estates Dr,30,32.78451502550206,-80.00057521318111,12.74,no risk under these thresholds,,
+764356,Columbus St / King St,20,32.793961682632,-79.941330662405,12.84,no risk under these thresholds,,
+794770,Savannah Hwy / Briarcliff Dr,30,32.78505571577048,-80.0024882447031,12.84,no risk under these thresholds,,
+764476,Mt Pleasant St / Rutledge Ave,20,32.8124502674506,-79.9545925040111,12.91,no risk under these thresholds,,
+764387,King St / Sumter St,20,32.797775060419774,-79.94571275401825,12.94,no risk under these thresholds,,
+819689,Savannah Hwy / West Harrison Rd,30,32.77990079763343,-79.9743927934022,13.01,no risk under these thresholds,,
+819685,Savannah Hwy / Stocker Dr,30,32.780467175,-79.977689742,13.02,no risk under these thresholds,,
+764804,Columbus St / Meeting St,20,32.794410595734,-79.940443680908,13.05,no risk under these thresholds,,
+764253,Savannah Hwy / Coburg Rd,30,32.78249474940813,-79.98908832634662,13.1,no risk under these thresholds,,
+2335615,King St / Cannon St,211,32.79218454452804,-79.94077169788085,13.17,no risk under these thresholds,,
+2538026,King St / George St,211,32.7843719819396,-79.935375905177,13.37,no risk under these thresholds,,
+764333,Mary St / Meeting St,"213, 30",32.7908312323668,-79.9382171464812,13.4,no risk under these thresholds,,
+764293,King St / Vanderhorst St,"211, 213",32.78742892927403,-79.93746863243166,13.63,no risk under these thresholds,,
+794765,Savannah Hwy / Parish Rd,30,32.78078931924773,-79.97821681319279,13.7,no risk under these thresholds,,
+764355,Spring St / Meeting St,"211, 30",32.7937135104283,-79.9400960856198,13.91,no risk under these thresholds,,
+764474,Mt Pleasant St / King St,20,32.81245282395243,-79.95202349275412,13.93,no risk under these thresholds,,
+764913,Rutledge Ave / Courtland Ave,20,32.814357672031356,-79.95459780961244,14.23,no risk under these thresholds,,
+2332206,King St / Mt. Pleasant St,20,32.812848751564,-79.951470671711,14.32,no risk under these thresholds,,
+764490,King St / Heriot St,20,32.81577771512784,-79.95138028772628,14.74,no risk under these thresholds,,
+794775,Savannah Hwy / Braxton Ave,30,32.787459143069796,-80.01626985607075,15.32,no risk under these thresholds,,
+764294,Savannah Hwy / Braxton Ave,30,32.78730255502853,-80.01656943886786,15.55,no risk under these thresholds,,
+794777,Savannah Hwy / Dupont Rd,30,32.7889314817034,-80.0247362221882,16.54,no risk under these thresholds,,
+764308,Savannah Hwy / Stinson Dr,30,32.78888861006126,-80.02568491629142,16.72,no risk under these thresholds,,
+819683,Savannah Hwy / Wappoo Rd,30,32.788195996,-80.021625958,17.58,no risk under these thresholds,,
+794776,Savannah Hwy / Wappoo Rd,30,32.78839146920548,-80.02160897274467,18.0,no risk under these thresholds,,
+2543545,Rivers Ave Park & Ride Bay 1,XP1,32.96127913775172,-80.04684838869049,32.19,no risk under these thresholds,,
