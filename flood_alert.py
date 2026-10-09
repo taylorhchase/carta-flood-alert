@@ -3,7 +3,7 @@ CARTA Flood Alert System - Prototype (Session 3)
 
 Pulls two public data feeds for Charleston, SC and prints them:
   1. NOAA CO-OPS  - 48-hour high/low tide predictions, Station 8665530
-  2. NWS Alerts   - active coastal flood advisories, Zone SCZ047
+  2. NWS Alerts   - active coastal flood advisories, Zone SCZ150
 """
 
 import requests
@@ -15,7 +15,7 @@ from datetime import datetime, timedelta
 # to change them in one place if the station or zone ever changes.
 
 NOAA_STATION_ID = "8665530"   # Charleston Harbor, SC
-NWS_ZONE_ID = "SCZ047"        # Charleston County coastal zone
+NWS_ZONE_ID = "SCZ150"        # Charleston County coastal zone
 
 NOAA_URL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
 NOAA_MDAPI = f"https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/{NOAA_STATION_ID}"
@@ -188,7 +188,7 @@ def filter_coastal_flood_alerts(alerts):
     """
     Keep only alerts that are actually about coastal flooding.
 
-    The zone-alerts endpoint returns EVERY active NWS alert for SCZ047 --
+    The zone-alerts endpoint returns EVERY active NWS alert for SCZ150 --
     that can include unrelated hazards like a Rip Current Statement or
     Small Craft Advisory. This tool only cares about flooding, so we
     filter down to alerts whose event type mentions "Coastal Flood"

@@ -263,7 +263,7 @@
 
   <div class="file-card">
     <div class="filename">flood_alert.py</div>
-    <div class="desc">Calls the NOAA CO-OPS API for Charleston Harbor Station 8665530 and retrieves the next 48 hours of high and low tide predictions. Also calls the NWS Alerts API for zone SCZ047 to check for active coastal flood advisories. Returns combined water level estimate: astronomical tide + surge if advisory active.</div>
+    <div class="desc">Calls the NOAA CO-OPS API for Charleston Harbor Station 8665530 and retrieves the next 48 hours of high and low tide predictions. Also calls the NWS Alerts API for zone SCZ150 to check for active coastal flood advisories. Returns combined water level estimate: astronomical tide + surge if advisory active.</div>
   </div>
 
   <h3><span class="phase-badge">Phase 2</span> Stop-Level Flood Vulnerability Research</h3>
@@ -348,7 +348,7 @@
   <table>
     <tr><th>Source</th><th>What It Provides</th><th>Cost</th></tr>
     <tr><td><strong>NOAA CO-OPS API</strong><br><span class="url">api.tidesandcurrents.noaa.gov</span><br>Station 8665530 · datum=MLLW</td><td>48-hour tide predictions for Charleston Harbor; also historical observed water levels via product=water_level</td><td>Free, no key</td></tr>
-    <tr><td><strong>NWS Alerts API</strong><br><span class="url">api.weather.gov/alerts/active?zone=SCZ047</span></td><td>Active coastal flood advisories and warnings for Charleston County</td><td>Free, no key</td></tr>
+    <tr><td><strong>NWS Alerts API</strong><br><span class="url">api.weather.gov/alerts/active?zone=SCZ150</span></td><td>Active coastal flood advisories and warnings for Charleston County</td><td>Free, no key</td></tr>
     <tr><td><strong>CARTA GTFS Feed</strong><br><span class="url">data.trilliumtransit.com/gtfs/carta-sc-us</span></td><td>Every bus stop's name, ID, latitude, and longitude</td><td>Free, public</td></tr>
     <tr><td><strong>USGS 3DEP Elevation</strong><br><span class="url">epqs.nationalmap.gov/v1/json</span></td><td>Ground elevation in feet for any GPS coordinate in the US</td><td>Free, no key</td></tr>
   </table>
@@ -452,7 +452,7 @@
     <tr><td>Live dashboard</td><td><span class="url">carta-flood-alert-production.up.railway.app</span></td></tr>
     <tr><td>GitHub repository</td><td><span class="url">github.com/taylorhchase/carta-flood-alert</span></td></tr>
     <tr><td>NOAA CO-OPS API</td><td><span class="url">api.tidesandcurrents.noaa.gov/api/prod</span></td></tr>
-    <tr><td>NWS Alerts API</td><td><span class="url">api.weather.gov/alerts/active?zone=SCZ047</span></td></tr>
+    <tr><td>NWS Alerts API</td><td><span class="url">api.weather.gov/alerts/active?zone=SCZ150</span></td></tr>
     <tr><td>CARTA routes &amp; maps</td><td><span class="url">ridecarta.com/maps-schedules</span></td></tr>
     <tr><td>NOAA Station 8665530</td><td><span class="url">tidesandcurrents.noaa.gov/stationhome.html?id=8665530</span></td></tr>
     <tr><td>USGS Elevation API</td><td><span class="url">epqs.nationalmap.gov/v1/json</span></td></tr>

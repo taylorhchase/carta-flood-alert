@@ -9,7 +9,7 @@ be texted or emailed to riders the night before.
 
 Pipeline:
   1. NOAA CO-OPS  -> 48-hour tide predictions, Station 8665530
-  2. NWS Alerts   -> any active Coastal Flood Advisory/Warning for SCZ047,
+  2. NWS Alerts   -> any active Coastal Flood Advisory/Warning for SCZ150,
                       with a surge estimate pulled from its text
   3. tide + surge -> combined water level estimate
   4. combined level -> severity band -> affected routes (from
@@ -25,7 +25,10 @@ from datetime import datetime, timedelta
 import requests
 
 NOAA_STATION_ID = "8665530"
-NWS_ZONE_ID = "SCZ047"
+# Charleston County's current NWS public forecast zone, verified live
+# against api.weather.gov/zones?area=SC&type=land (zone SCZ047 referenced
+# in earlier versions of this file does not exist as a current NWS zone).
+NWS_ZONE_ID = "SCZ150"
 
 NOAA_URL = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
 NWS_URL = f"https://api.weather.gov/alerts/active/zone/{NWS_ZONE_ID}"
@@ -121,7 +124,7 @@ def get_highest_tide_next_24h(predictions):
 # ---------------------------------------------------------------------------
 
 def get_active_flood_alerts():
-    """Fetch active NWS alerts for SCZ047, filtered to Coastal Flood
+    """Fetch active NWS alerts for SCZ150, filtered to Coastal Flood
     Advisory/Warning only -- narrower than flood_alert.py's session-4
     filter (which also kept Watches and Statements), because this alert
     generator only acts on the two alert types that mean "flooding is
