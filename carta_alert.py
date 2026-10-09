@@ -19,7 +19,6 @@ Pipeline:
 """
 
 import csv
-import re
 from datetime import datetime, timedelta
 
 import requests
@@ -124,11 +123,11 @@ def get_highest_tide_next_24h(predictions):
 # ---------------------------------------------------------------------------
 
 def get_active_flood_alerts():
-    """Fetch active NWS alerts for SCZ150, filtered to Coastal Flood
-    Advisory/Warning only -- narrower than flood_alert.py's session-4
-    filter (which also kept Watches and Statements), because this alert
-    generator only acts on the two alert types that mean "flooding is
-    happening or about to happen," not "flooding is possible later."
+    """Fetch active NWS alerts for SCZ150, filtered to the three coastal
+    flood products that map onto this project's severity bands: Advisory
+    (MINOR), Watch (MODERATE), and Warning (MAJOR). Watch was previously
+    excluded here, which silently dropped exactly the product type most
+    likely to be active ahead of a landfalling storm.
     """
     headers = {
         "User-Agent": "CARTA Flood Alert Prototype (student project, contact: amychasewest@gmail.com)"
@@ -138,42 +137,46 @@ def get_active_flood_alerts():
     features = response.json().get("features", [])
     return [
         f for f in features
-        if f["properties"].get("event") in ("Coastal Flood Advisory", "Coastal Flood Warning")
+        if f["properties"].get("event") in NWS_FLOOD_PRODUCT_FLOOR_FT
     ]
 
 
-# Matches phrasing NWS commonly uses in coastal flood products, e.g.
-# "an additional 1 to 2 feet of storm surge" or "surge of around 1.5 feet".
-# Two patterns because the number can come before or after the word "surge".
-SURGE_PATTERNS = [
-    re.compile(r"(\d+(?:\.\d+)?)\s*(?:to|-)\s*(\d+(?:\.\d+)?)?\s*f(?:oo|ee)?t.{0,40}?surge", re.IGNORECASE),
-    re.compile(r"surge.{0,40}?(\d+(?:\.\d+)?)\s*(?:to|-)?\s*(\d+(?:\.\d+)?)?\s*f(?:oo|ee)?t", re.IGNORECASE),
-]
+# NWS's own coastal flood products already correspond to this project's
+# MINOR/MODERATE/MAJOR severity bands (see SEVERITY_BANDS) -- an Advisory
+# means "minor flood stage reached," a Watch means "moderate flood stage
+# possible," a Warning means "major flood stage expected." Rather than
+# regex-parsing a water-level number out of free-form advisory text (which
+# breaks whenever NWS phrases a bulletin differently -- e.g. giving a
+# direct MLLW range instead of an explicit "N feet of storm surge"), read
+# the product type directly off the alert and floor the combined water
+# level at what that product guarantees.
+NWS_FLOOD_PRODUCT_FLOOR_FT = {
+    "Coastal Flood Advisory": 7.1,   # MINOR  (SEVERITY_BANDS floor: 7.0)
+    "Coastal Flood Watch": 7.9,      # MODERATE (SEVERITY_BANDS floor: 7.5)
+    "Coastal Flood Warning": 8.1,    # MAJOR  (SEVERITY_BANDS floor: 8.0)
+}
+NWS_FLOOD_PRODUCT_RANK = {"Coastal Flood Advisory": 0, "Coastal Flood Watch": 1, "Coastal Flood Warning": 2}
 
 
-def extract_surge_ft(alert):
-    """Look for a numeric storm-surge estimate in an alert's text.
+def most_severe_alert(alerts):
+    """NWS can have more than one coastal flood product active at once --
+    e.g. an Advisory covering tonight's high tide layered under a Watch
+    for tomorrow morning's higher one, exactly as happened during Isaias.
+    Pick whichever implies the higher water level, same "overestimate
+    risk, not underestimate it" principle as the rest of this module.
+    Returns None if `alerts` is empty."""
+    if not alerts:
+        return None
+    return max(alerts, key=lambda a: NWS_FLOOD_PRODUCT_RANK.get(a["properties"].get("event"), -1))
 
-    NWS alert text is written for humans, not machines -- there's no
-    structured "surge_ft" field, so this is a best-effort regex search
-    across the headline/description/instruction fields. When the alert
-    gives a range ("1 to 2 feet"), we take the HIGHER number: for a
-    rider-safety warning, overestimating flood risk is a far smaller
-    problem than underestimating it. Returns 0.0 if no surge figure is
-    found in the text at all.
-    """
-    props = alert["properties"]
-    text = " ".join(
-        props.get(field) or "" for field in ("headline", "description", "instruction")
-    )
 
-    best = 0.0
-    for pattern in SURGE_PATTERNS:
-        for match in pattern.finditer(text):
-            values = [float(g) for g in match.groups() if g]
-            if values:
-                best = max(best, max(values))
-    return best
+def flood_product_floor_ft(alert):
+    """The minimum combined water level (ft, MLLW) implied by this alert's
+    NWS product type. Returns 0.0 if the alert isn't a recognized coastal
+    flood product (shouldn't happen given get_active_flood_alerts already
+    filters to NWS_FLOOD_PRODUCT_FLOOR_FT's keys, but a function that reads
+    an unvalidated dict key shouldn't KeyError on anything unexpected)."""
+    return NWS_FLOOD_PRODUCT_FLOOR_FT.get(alert["properties"].get("event"), 0.0)
 
 
 # ---------------------------------------------------------------------------
@@ -319,10 +322,14 @@ def main():
     tide_dt, tide_ft = get_highest_tide_next_24h(predictions)
 
     active_alerts = get_active_flood_alerts()
-    alert_used = active_alerts[0] if active_alerts else None
-    surge_ft = extract_surge_ft(alert_used) if alert_used else 0.0
+    alert_used = most_severe_alert(active_alerts)
+    floor_ft = flood_product_floor_ft(alert_used) if alert_used else 0.0
 
-    combined_ft = (tide_ft or 0.0) + surge_ft
+    # surge_ft here means "how much the active NWS product's floor adds on
+    # top of the plain predicted tide" -- kept so tide_ft + surge_ft still
+    # equals combined_ft for the human-readable breakdown in build_alert_text.
+    surge_ft = max(0.0, floor_ft - (tide_ft or 0.0))
+    combined_ft = max(tide_ft or 0.0, floor_ft)
     severity = classify_severity(combined_ft)
 
     route_summary = load_route_summary()

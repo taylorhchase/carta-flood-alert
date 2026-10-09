@@ -155,9 +155,14 @@ def build_route_rows(severity, combined_ft, route_summary, route_long_names, sto
 def build_panel1(predictions, active_alerts, route_summary, route_long_names, stops_by_route):
     tide_dt, tide_ft = ca.get_highest_tide_in_window(predictions, 0, 24)
     tide_dt = to_eastern(tide_dt)
-    alert_used = active_alerts[0] if active_alerts else None
-    surge_ft = ca.extract_surge_ft(alert_used) if alert_used else 0.0
-    combined_ft = (tide_ft or 0.0) + surge_ft
+    alert_used = ca.most_severe_alert(active_alerts)
+    floor_ft = ca.flood_product_floor_ft(alert_used) if alert_used else 0.0
+    # surge_ft here means "how much the active NWS product's floor adds on
+    # top of the plain predicted tide" -- kept so tide_ft + surge_ft still
+    # equals combined_ft for the "X ft tide + Y ft storm surge" breakdown
+    # shown in the per-route alert text below.
+    surge_ft = max(0.0, floor_ft - (tide_ft or 0.0))
+    combined_ft = max(tide_ft or 0.0, floor_ft)
     severity = ca.classify_severity(combined_ft) or "NONE"
 
     window_start_str = window_end_str = None
