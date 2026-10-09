@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CARTA Flood Alert — Project Summary for TC</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+  }
+
+  .page {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem 2rem 3rem;
+  }
+
+  h1 {
+    font-size: 20pt;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 4px;
+    font-family: -apple-system, Arial, sans-serif;
+  }
+
+  .subtitle {
+    font-size: 9pt;
+    color: #444;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #000;
+    font-family: Arial, sans-serif;
+  }
+
+  h2 {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #000;
+    margin: 2rem 0 0.6rem;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #000;
+    font-family: Arial, sans-serif;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #000;
+    margin: 1.2rem 0 0.3rem;
+    font-family: Arial, sans-serif;
+    page-break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 0.7rem;
+    color: #000;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  li {
+    margin-bottom: 0.3rem;
+  }
+
+  .callout {
+    border: 1.5pt solid #000;
+    padding: 0.6rem 0.8rem;
+    margin: 0.8rem 0;
+    page-break-inside: avoid;
+  }
+
+  .callout p {
+    margin: 0;
+    font-style: italic;
+  }
+
+  .warning {
+    border-left: 4pt solid #000;
+    padding: 0.5rem 0.8rem;
+    margin: 0.8rem 0;
+    background: #f5f5f5;
+    page-break-inside: avoid;
+  }
+
+  .warning p { margin: 0; font-size: 10pt; }
+
+  .file-card {
+    border: 1pt solid #ccc;
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 0.5rem;
+    page-break-inside: avoid;
+  }
+
+  .file-card .filename {
+    font-family: 'Courier New', monospace;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  .file-card .desc {
+    font-size: 10pt;
+    margin: 0;
+  }
+
+  .finding {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    margin-bottom: 0.4rem;
+    page-break-inside: avoid;
+  }
+
+  .finding-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 4px;
+    flex-shrink: 0;
+    border: 1pt solid #000;
+  }
+
+  .dot-filled { background: #000; }
+  .dot-half { background: #888; }
+  .dot-empty { background: #fff; }
+
+  .finding-text { font-size: 10.5pt; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    margin: 0.7rem 0;
+    page-break-inside: avoid;
+  }
+
+  th {
+    background: #000;
+    color: #fff;
+    padding: 5px 8px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+  }
+
+  td {
+    padding: 5px 8px;
+    border-bottom: 0.5pt solid #ccc;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td { background: #f9f9f9; }
+
+  .q {
+    border-left: 3pt solid #000;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 0.8rem;
+    page-break-inside: avoid;
+  }
+
+  .q .question {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 10.5pt;
+    margin-bottom: 0.3rem;
+  }
+
+  .q .answer { font-size: 10pt; margin: 0; }
+
+  .phase-badge {
+    display: inline-block;
+    border: 1pt solid #000;
+    font-size: 8pt;
+    font-weight: bold;
+    padding: 1px 6px;
+    margin-right: 4px;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+  }
+
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 9pt;
+    background: #f0f0f0;
+    padding: 1px 3px;
+  }
+
+  .url { font-family: 'Courier New', monospace; font-size: 9pt; }
+
+  .print-btn {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 10px 28px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .print-btn:hover { background: #333; }
+
+  @media print {
+    .print-btn { display: none; }
+    body { font-size: 10.5pt; }
+    .page { padding: 0; max-width: 100%; }
+    h2 { page-break-before: auto; }
+    .q, .file-card, .finding, .callout, .warning { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <button class="print-btn" onclick="window.print()">🖨 Print / Save as PDF</button>
+
+  <br>
+
+  <h1>CARTA Flood Alert System</h1>
+  <div class="subtitle">
+    Project Summary &amp; Study Guide for TC &nbsp;·&nbsp; September 2026<br>
+    Live: <span class="url">carta-flood-alert-production.up.railway.app</span> &nbsp;·&nbsp;
+    Code: <span class="url">github.com/taylorhchase/carta-flood-alert</span>
+  </div>
+
+  <div class="callout">
+    <p>This document explains everything TC built, why each decision was made, and how to answer questions about it in a college interview or CARTA meeting. Know every section cold.</p>
+  </div>
+
+  <!-- 1. THE PROBLEM -->
+  <h2>1. The Problem TC Set Out to Solve</h2>
+  <p>Charleston, SC experiences tidal flooding roughly 25 times per year at minor flood stage — a number growing fast. By 2050, NOAA projects 45–115 flood days per year for Charleston specifically.</p>
+  <p>When flooding hits, CARTA's 9,700 daily bus riders find out about service disruptions the same way: a social media post after the flooding has already started. On August 22, 2025, CARTA posted a generic Instagram graphic: <em>"service interruptions due to flooding — stay safe."</em> No routes named. No stops listed. No advance warning.</p>
+  <p>The tides that cause these disruptions are mathematically predictable 48 hours in advance. NOAA publishes tide forecasts a year out. The gap TC identified: <strong>nobody had ever connected what NOAA knows about tomorrow's tides to what CARTA riders need to know tonight.</strong></p>
+
+  <div class="callout">
+    <p>The people hurt most are those with the least flexibility: dialysis patients (CARTA's own FAQ names them as the critical group), MUSC hospital shift workers, elderly riders on fixed fares, and low-income commuters who cannot afford to miss a shift or call an Uber.</p>
+  </div>
+
+  <h3>Why Waze and Google Maps don't solve this</h3>
+  <p>Waze and FloodMapp are designed for car drivers already on the road. A dialysis patient needs to know the night before whether their bus will reach the hospital — not get a reroute alert while standing at a flooded stop. Different problem, different population, different timing.</p>
+
+  <h3>Why CARTA's current system falls short</h3>
+  <p>CARTA's FAQ commits to serving passable roads — but the list of how they communicate this is blank on their website. Their Transit App has no predictive capability. On real flood days, detour updates have been posted while buses were already stuck.</p>
+
+  <!-- 2. WHAT WAS BUILT -->
+  <h2>2. What TC Built — The Complete System</h2>
+  <p>Three phases, twelve coding sessions, one live deployed web application.</p>
+
+  <h3><span class="phase-badge">Phase 1</span> API Connections</h3>
+
+  <div class="file-card">
+    <div class="filename">flood_alert.py</div>
+    <div class="desc">Calls the NOAA CO-OPS API for Charleston Harbor Station 8665530 and retrieves the next 48 hours of high and low tide predictions. Also calls the NWS Alerts API for zone SCZ047 to check for active coastal flood advisories. Returns combined water level estimate: astronomical tide + surge if advisory active.</div>
+  </div>
+
+  <h3><span class="phase-badge">Phase 2</span> Stop-Level Flood Vulnerability Research</h3>
+  <p>This is TC's original research — data nobody has published before.</p>
+
+  <div class="file-card">
+    <div class="filename">stop_flood_risk.py</div>
+    <div class="desc">Downloads CARTA's public GTFS feed (GPS coordinates of every bus stop), calls the USGS 3DEP Elevation API for each stop's ground elevation in feet, applies NOAA flood thresholds, and classifies every stop by risk level.</div>
+  </div>
+
+  <div class="file-card">
+    <div class="filename">stop_flood_risk_report.csv</div>
+    <div class="desc">155 CARTA bus stops across 7 routes, each with: stop name, routes served, latitude, longitude, ground elevation in feet, flood risk classification, tide threshold that triggers flooding, and estimated flood events per year.</div>
+  </div>
+
+  <div class="file-card">
+    <div class="filename">route_flood_summary.csv</div>
+    <div class="desc">Route-level matrix: total stops, stops at risk, first flood threshold, and estimated annual disruption frequency for each of the 7 target routes.</div>
+  </div>
+
+  <h3><span class="phase-badge">Phase 3</span> Alert Generator + Web Dashboard</h3>
+
+  <div class="file-card">
+    <div class="filename">carta_alert.py</div>
+    <div class="desc">Combines NOAA tide predictions and NWS surge data to calculate combined water level, determine flood risk level, identify affected routes and stops, calculate the flood risk window (2 hours before peak to 3 hours after), and generate copy-ready plain-language rider alerts per route.</div>
+  </div>
+
+  <div class="file-card">
+    <div class="filename">app.py</div>
+    <div class="desc">Flask web application. A background thread refreshes a shared data cache at 6 AM and 6 PM EST daily — the page never calls NOAA/NWS directly on load. Deployed on Railway at port 5050. Includes a manual /refresh endpoint.</div>
+  </div>
+
+  <div class="file-card">
+    <div class="filename">templates/dashboard.html</div>
+    <div class="desc">Two-panel web dashboard: tonight's alert (next 24 hours) and 48-hour outlook. Each route row is expandable showing all affected stops with elevations. Each affected route has its own copy-ready alert text with risk window and specific stop names. Auto-refreshes every 60 seconds.</div>
+  </div>
+
+  <div class="file-card">
+    <div class="filename">run.sh</div>
+    <div class="desc">Shell script to start the Flask server locally. Uses exec python3 app.py so the port frees immediately on shutdown.</div>
+  </div>
+
+  <h3><span class="phase-badge">Phase 4</span> Historical Validation</h3>
+
+  <div class="file-card">
+    <div class="filename">validate_aug2025.py + aug2025_validation.txt</div>
+    <div class="desc">Pulls NOAA historical observed water levels for August 20–22, 2025. Tests what TC's model would have predicted 48 hours before CARTA's generic flood alert. Runs actual production logic against the real observed peak of 7.93 ft. Documents the honest finding about surge-driven events and NWS data retention limits.</div>
+  </div>
+
+  <div class="file-card">
+    <div class="filename">carta_flood_briefing.txt</div>
+    <div class="desc">Plain-language route-by-route briefing document. Explains methodology, data sources, key findings, and the honest caveat about elevation thresholds being a screening assumption rather than a precise hydrological model. Ready to hand to a CARTA official.</div>
+  </div>
+
+  <!-- 3. KEY FINDINGS -->
+  <h2>3. Key Research Findings — Know These Numbers</h2>
+
+  <div class="finding">
+    <div class="finding-dot dot-filled"></div>
+    <div class="finding-text"><strong>39 of 155 stops</strong> across the 7 target routes are flood-vulnerable under at least one NOAA threshold.</div>
+  </div>
+  <div class="finding">
+    <div class="finding-dot dot-filled"></div>
+    <div class="finding-text"><strong>Route 203 Medical Shuttle:</strong> 5 of 7 stops at risk (71%). Lowest stop: Courtenay Dr / Charleston Center Dr at <strong>2.56 ft elevation</strong> — floods at minor stage approximately 25 times per year. CARTA's own FAQ names dialysis patients as the critical group to protect.</div>
+  </div>
+  <div class="finding">
+    <div class="finding-dot dot-filled"></div>
+    <div class="finding-text"><strong>Route 213 DASH Lockwood/Calhoun:</strong> 14 of 24 stops at risk (58%). Triggers at minor flood stage 25 times per year. Lowest stop: Bee St / VA Hospital at 3.2 ft.</div>
+  </div>
+  <div class="finding">
+    <div class="finding-dot dot-half"></div>
+    <div class="finding-text"><strong>Routes 210, 211, 30, XP1:</strong> Between 3 and 8 stops at risk each, triggering at minor or moderate stage.</div>
+  </div>
+  <div class="finding">
+    <div class="finding-dot dot-empty"></div>
+    <div class="finding-text"><strong>Route 20 King/Meeting:</strong> Most resilient — only 2 stops at risk, not until major flood stage (8.0 ft), approximately 3 times per year. This positive finding tells CARTA which route stays reliable during flood events.</div>
+  </div>
+
+  <!-- 4. DATA SOURCES -->
+  <h2>4. The Data Sources — Know These Cold</h2>
+
+  <table>
+    <tr><th>Source</th><th>What It Provides</th><th>Cost</th></tr>
+    <tr><td><strong>NOAA CO-OPS API</strong><br><span class="url">api.tidesandcurrents.noaa.gov</span><br>Station 8665530 · datum=MLLW</td><td>48-hour tide predictions for Charleston Harbor; also historical observed water levels via product=water_level</td><td>Free, no key</td></tr>
+    <tr><td><strong>NWS Alerts API</strong><br><span class="url">api.weather.gov/alerts/active?zone=SCZ047</span></td><td>Active coastal flood advisories and warnings for Charleston County</td><td>Free, no key</td></tr>
+    <tr><td><strong>CARTA GTFS Feed</strong><br><span class="url">data.trilliumtransit.com/gtfs/carta-sc-us</span></td><td>Every bus stop's name, ID, latitude, and longitude</td><td>Free, public</td></tr>
+    <tr><td><strong>USGS 3DEP Elevation</strong><br><span class="url">epqs.nationalmap.gov/v1/json</span></td><td>Ground elevation in feet for any GPS coordinate in the US</td><td>Free, no key</td></tr>
+  </table>
+
+  <!-- 5. FLOOD THRESHOLDS -->
+  <h2>5. The Flood Threshold Model</h2>
+  <p>NOAA defines three official flood categories for Charleston Harbor (Station 8665530), measured in feet above MLLW (Mean Lower Low Water — the average of the daily lowest tides, used as the zero baseline):</p>
+
+  <table>
+    <tr><th>Harbor Level</th><th>Category</th><th>Road Impact</th><th>Times/Year</th></tr>
+    <tr><td><strong>7.0 ft MLLW</strong></td><td>Minor</td><td>Some impacts; DASH 213 first affected</td><td>~25</td></tr>
+    <tr><td><strong>7.5 ft MLLW</strong></td><td>Moderate</td><td>Several DASH routes; Lockwood/Calhoun closures</td><td>~8</td></tr>
+    <tr><td><strong>8.0 ft MLLW</strong></td><td>Major</td><td>Widespread peninsula closures; all 7 routes</td><td>~3</td></tr>
+  </table>
+
+  <p>TC's stop classification uses these inundation thresholds:</p>
+  <ul>
+    <li>Ground below 5.5 ft → floods at 7.0 ft harbor level (MINOR)</li>
+    <li>Ground below 6.5 ft → floods at 7.5 ft harbor level (MODERATE)</li>
+    <li>Ground below 7.5 ft → floods at 8.0 ft harbor level (MAJOR)</li>
+  </ul>
+
+  <div class="warning">
+    <p><strong>The methodology caveat TC must own:</strong> The elevation-to-flood mapping is a simplifying screening assumption, not a validated hydrological model. Real flooding depends on drainage capacity, distance from the harbor, and surge behavior — not just ground elevation. TC's model correctly identifies which stops deserve closer engineering attention. It is a screening tool, not a precise prediction. Saying this proactively makes TC more credible, not less.</p>
+  </div>
+
+  <!-- 6. WHY TIDE + NWS -->
+  <h2>6. Why the System Needs Both NOAA Tides AND NWS Advisories</h2>
+  <p>Astronomical tide predictions tell you how high the water would be on a perfectly calm day — driven by lunar and solar gravity. They are mathematically precise and published a year in advance. But they are not sufficient alone.</p>
+  <p>What actually closes roads is the combination of the astronomical tide plus storm surge — additional water pushed into the harbor by wind and low pressure. A 1–2 ft surge layered on top of a 6.5 ft astronomical tide is enough to cross the 8.0 ft major flood threshold.</p>
+
+  <div class="callout">
+    <p>The August 22, 2025 event proves this exactly. The astronomical tide was only 6.2 ft — well below the 7.0 ft minor threshold. Storm surge of 1.70 ft pushed the harbor to 7.93 ft, triggering widespread flooding and the CARTA Instagram post. A tide-only model would have missed this entirely. The combined NOAA + NWS model is what makes the system work.</p>
+  </div>
+
+  <!-- 7. VALIDATION -->
+  <h2>7. The August 2025 Validation — Know This Story</h2>
+  <p>On August 22, 2025, CARTA posted: <em>"Heads up! We are experiencing service interruptions due to flooding. Normal routes will resume as roads become passable again. Stay safe!"</em></p>
+
+  <p>NOAA's actual observed data for that event:</p>
+  <ul>
+    <li>August 20: harbor at 7.61 ft (MODERATE) — flooding already occurring</li>
+    <li>August 21: harbor at 7.72 ft — conditions worsening</li>
+    <li>August 22: harbor peaked at 7.93 ft — CARTA posts generic alert</li>
+  </ul>
+
+  <p>When TC's production model is run against the real observed peak of 7.93 ft, it correctly classifies MODERATE, correctly flags all 6 non-Route-20 routes, and generates specific rider alerts naming Bee St/VA Hospital at 3.2 ft and the full Calhoun Street corridor.</p>
+
+  <div class="warning">
+    <p><strong>The honest nuance:</strong> A tide-prediction-only run on August 20 looking 48 hours ahead would have shown 6.23 ft — no flag — because this was a pure surge event. The live dashboard addresses this by incorporating the NWS coastal flood advisory in real time. Historical NWS advisory data isn't retained in the public API past about 30 days, so the backtest can't confirm what advisory was active on August 20. TC tested this empirically and documented it honestly. That intellectual honesty is itself worth explaining.</p>
+  </div>
+
+  <!-- 8. Q&A -->
+  <h2>8. Questions TC Should Be Ready to Answer</h2>
+
+  <div class="q">
+    <div class="question">What problem does your project solve?</div>
+    <div class="answer">Charleston floods roughly 25 times a year at minor flood stage, and every time it happens CARTA's 9,700 daily riders find out about service disruptions after they're already at the stop. The tides that cause this are mathematically predictable 48 hours in advance. My system connects NOAA's tide forecast and NWS surge advisories to CARTA's actual bus stop locations and elevations — so riders get route-specific alerts the night before, not a generic social media post after the fact.</div>
+  </div>
+
+  <div class="q">
+    <div class="question">How did you figure out which stops would flood?</div>
+    <div class="answer">I downloaded CARTA's public GTFS feed, which contains the GPS coordinates of every bus stop. Then I called the USGS 3DEP Elevation API for each stop's ground elevation in feet. I applied NOAA's official flood thresholds for Charleston Harbor — 7.0 ft for minor flooding, 7.5 ft for moderate, 8.0 ft for major — and classified each stop by the harbor level at which its elevation would be inundated. That gave me a 155-stop vulnerability table that nobody had compiled before.</div>
+  </div>
+
+  <div class="q">
+    <div class="question">Why don't you just use Waze or Google Maps?</div>
+    <div class="answer">Waze and Google Maps are designed for car drivers who are already on the road. They tell you what's happening right now and reroute around it. The people I'm trying to serve — dialysis patients, hospital shift workers, low-income commuters — need to know the night before whether their bus will reach the hospital tomorrow morning. That's a planning problem, not a navigation problem. No existing tool addresses that specific need for transit-dependent riders.</div>
+  </div>
+
+  <div class="q">
+    <div class="question">Why do you need NWS data? Can't you just use tide predictions?</div>
+    <div class="answer">Tide predictions tell you the astronomical baseline — how high the water would be on a perfectly calm day. What actually closes roads is tide plus storm surge: extra water pushed into the harbor by wind and low pressure. The August 22, 2025 flooding was driven entirely by 1.7 feet of surge on top of a 6.2 ft tide. A tide-only model would have shown no risk. That's exactly why I combine both sources — neither alone is sufficient.</div>
+  </div>
+
+  <div class="q">
+    <div class="question">What are the limitations of your model?</div>
+    <div class="answer">The elevation-threshold mapping is a simplifying assumption — it doesn't account for drainage capacity, distance from the harbor, or surge behavior. It's a screening tool that identifies which stops deserve closer engineering attention, not a precise hydrological prediction. The August 2025 validation also showed that pure surge events require the live NWS advisory feed to catch, which my system does in real time but which I couldn't fully backtest because NWS doesn't retain historical advisory data past about 30 days. I tested this empirically and documented it honestly.</div>
+  </div>
+
+  <div class="q">
+    <div class="question">How does the web dashboard work technically?</div>
+    <div class="answer">It's a Flask web application deployed on Railway. A background thread runs on a schedule — 6 AM and 6 PM EST — that calls the NOAA and NWS APIs, processes the data, and stores the results in a shared cache. When someone loads the page, it reads from that cache rather than calling the APIs directly on every load. The dashboard shows two panels: tonight's alert for the next 24 hours with route-specific alert text, and a 48-hour outlook using astronomical tide only, with a note that NWS surge hasn't been confirmed yet for that window.</div>
+  </div>
+
+  <div class="q">
+    <div class="question">What would you do next if you had more time?</div>
+    <div class="answer">Three things. First, complete the full 2025 historical validation — pull every day last year when the harbor crossed each threshold and document what my model would have predicted versus what CARTA communicated. Second, design pre-planned flood detour routes for the highest-risk lines so the alert gives riders a specific alternate stop to use, not just a warning. Third, look at whether recent observed water levels could supplement the forecast — on a multi-day surge event like August 2025, the harbor was already at flood stage two days before CARTA said anything, and a live system watching observed levels could have flagged that automatically.</div>
+  </div>
+
+  <div class="q">
+    <div class="question">What engineering disciplines does this project draw on?</div>
+    <div class="answer">Several. The stop elevation and flood threshold analysis is applied fluid mechanics — understanding how water at a given tidal height translates into inundation at specific land elevations, which is core to mechanical and civil engineering. The data pipeline connecting multiple APIs, processing and caching the results, and serving them through a web interface is systems engineering — modeling how physical and information layers interact. And the human-centered design question — who needs this information, when, and in what format — is human factors engineering. Doppelmayr, the cable transport company I've followed since I was young, takes the same approach: model the physical environment, design around its constraints, build systems that work reliably within them.</div>
+  </div>
+
+  <!-- 9. LINKS -->
+  <h2>9. Key Links</h2>
+
+  <table>
+    <tr><th>What</th><th>URL</th></tr>
+    <tr><td>Live dashboard</td><td><span class="url">carta-flood-alert-production.up.railway.app</span></td></tr>
+    <tr><td>GitHub repository</td><td><span class="url">github.com/taylorhchase/carta-flood-alert</span></td></tr>
+    <tr><td>NOAA CO-OPS API</td><td><span class="url">api.tidesandcurrents.noaa.gov/api/prod</span></td></tr>
+    <tr><td>NWS Alerts API</td><td><span class="url">api.weather.gov/alerts/active?zone=SCZ047</span></td></tr>
+    <tr><td>CARTA routes &amp; maps</td><td><span class="url">ridecarta.com/maps-schedules</span></td></tr>
+    <tr><td>NOAA Station 8665530</td><td><span class="url">tidesandcurrents.noaa.gov/stationhome.html?id=8665530</span></td></tr>
+    <tr><td>USGS Elevation API</td><td><span class="url">epqs.nationalmap.gov/v1/json</span></td></tr>
+    <tr><td>CARTA GTFS Feed</td><td><span class="url">mobilitydatabase.org/feeds/gtfs/mdb-352</span></td></tr>
+  </table>
+
+  <br>
+  <button class="print-btn" onclick="window.print()">🖨 Print / Save as PDF</button>
+
+</div>
+</body>
+</html>

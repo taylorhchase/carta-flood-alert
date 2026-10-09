@@ -24,12 +24,28 @@ import threading
 import time
 from datetime import datetime, timedelta
 
+import pytz
 import schedule
 from flask import Flask, render_template, redirect, url_for
 
 import carta_alert as ca
 
 app = Flask(__name__)
+
+# CARTA operates in Charleston, SC, so every time shown on the dashboard --
+# last-updated, the scheduled refreshes, the flood risk windows -- should
+# read in Eastern time regardless of what time zone the server itself is
+# set to (e.g. a UTC-clocked host).
+EASTERN = pytz.timezone("America/New_York")
+
+
+def to_eastern(naive_dt):
+    """NOAA's tide predictions come back with time_zone="lst_ldt" (see
+    carta_alert.get_tide_predictions), i.e. the station's own local time --
+    already Eastern wall-clock, just without a tzinfo attached. Attach it
+    (localize, not convert) so the dashboard can treat it like any other
+    Eastern-aware datetime."""
+    return EASTERN.localize(naive_dt) if naive_dt else None
 
 # NONE/MINOR/MODERATE/MAJOR collapse down to the three colors the dashboard
 # asked for: green (no impact), yellow (minor or moderate), red (major).
@@ -138,6 +154,7 @@ def build_route_rows(severity, combined_ft, route_summary, route_long_names, sto
 
 def build_panel1(predictions, active_alerts, route_summary, route_long_names, stops_by_route):
     tide_dt, tide_ft = ca.get_highest_tide_in_window(predictions, 0, 24)
+    tide_dt = to_eastern(tide_dt)
     alert_used = active_alerts[0] if active_alerts else None
     surge_ft = ca.extract_surge_ft(alert_used) if alert_used else 0.0
     combined_ft = (tide_ft or 0.0) + surge_ft
@@ -177,6 +194,7 @@ def build_panel1(predictions, active_alerts, route_summary, route_long_names, st
 
 def build_panel2(predictions, route_summary, route_long_names, stops_by_route):
     tide_dt, tide_ft = ca.get_highest_tide_in_window(predictions, 24, 48)
+    tide_dt = to_eastern(tide_dt)
     # No surge is added here -- NWS doesn't forecast storm surge this far
     # out, so this is deliberately the astronomical tide alone.
     combined_ft = tide_ft or 0.0
@@ -226,27 +244,26 @@ def refresh_dashboard_data():
         with _cache_lock:
             _cache["panel1"] = panel1
             _cache["panel2"] = panel2
-            _cache["generated_at"] = datetime.now()
+            _cache["generated_at"] = datetime.now(EASTERN)
             _cache["error"] = None
-        print(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] Dashboard data refreshed.")
+        print(f"[{datetime.now(EASTERN):%Y-%m-%d %H:%M:%S %Z}] Dashboard data refreshed.")
     except Exception as exc:
         with _cache_lock:
             _cache["error"] = str(exc)
-        print(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] Dashboard refresh FAILED: {exc}")
+        print(f"[{datetime.now(EASTERN):%Y-%m-%d %H:%M:%S %Z}] Dashboard refresh FAILED: {exc}")
 
 
 # ---------------------------------------------------------------------------
-# Scheduler: runs refresh_dashboard_data() at 6 AM and 6 PM every day
+# Scheduler: runs refresh_dashboard_data() at 6 AM and 6 PM Eastern every day
 # ---------------------------------------------------------------------------
-# NOTE: the `schedule` library uses whatever time zone the machine it runs
-# on is set to. These times are intended as 6 AM / 6 PM EASTERN (to match
-# Charleston, SC) -- this only lines up automatically if the host machine's
-# system clock is also set to US Eastern. If this is ever deployed to a
-# server in another time zone, adjust the two times below accordingly.
+# `schedule`'s `.at()` otherwise uses whatever time zone the host machine's
+# system clock is set to. Passing tz="America/New_York" pins these two runs
+# to 6 AM / 6 PM Eastern (to match Charleston, SC) regardless of what time
+# zone the server itself runs in.
 
 def run_scheduler():
-    schedule.every().day.at("06:00").do(refresh_dashboard_data)
-    schedule.every().day.at("18:00").do(refresh_dashboard_data)
+    schedule.every().day.at("06:00", "America/New_York").do(refresh_dashboard_data)
+    schedule.every().day.at("18:00", "America/New_York").do(refresh_dashboard_data)
     while True:
         schedule.run_pending()
         time.sleep(30)
